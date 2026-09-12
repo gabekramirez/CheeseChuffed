@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: d02f66c3a4c50ba419413c522b649921
+=======
+guid: fcd65bd7c81bca54cb6d87905727177a
+>>>>>>> 310a1a6 (Added pot and salt shaker)
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
