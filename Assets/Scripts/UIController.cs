@@ -18,10 +18,18 @@ public class UIController : MonoBehaviour
     [SerializeField] private GameObject orderMinimizedPrefab;
     [SerializeField] private GameObject orderMaximizedPrefab;
 
+    [Header("Gameplay Phase UI")]
+    [SerializeField] private TMP_Text phaseTXT;
+
     public void SetCurrentOrderUI()
     {
         cheeseOrderedTXT.text = orderManager.ongoingCheese.name;
         descriptionOrderedTXT.text = $"\"{orderManager.ongoingCheese.description}\"";
+    }
+
+    public void SetPhaseText(GameplayPhase phase)
+    {
+        phaseTXT.text = GamePlayPhaseToString(phase);
     }
 
     public void RefreshCheeseAttemptsUI()
@@ -115,6 +123,35 @@ public class UIController : MonoBehaviour
 
         minimized.gameObject.SetActive(!minimized.gameObject.activeSelf);
         maximized.gameObject.SetActive(!maximized.gameObject.activeSelf);
+    }
+    string GamePlayPhaseToString(GameplayPhase phase)
+    {
+        switch (phase)
+        {
+            case GameplayPhase.AddMilk:
+                return "Add Milk";
+
+            case GameplayPhase.TurnOnPot:
+                return "Turn On Pot";
+
+            case GameplayPhase.AddSalt:
+                return "Add Salt";
+
+            case GameplayPhase.AddCulture:
+                return "Add Culture";
+
+            case GameplayPhase.TurnOffPot:
+                return "Turn Off Pot";
+
+            case GameplayPhase.Age:
+                return "Age the Cheese";
+
+            case GameplayPhase.Present:
+                return "Present the Cheese";
+
+            default:
+                return "";
+        }
     }
 
     // Helper method to recursively delete all the children of a transform
