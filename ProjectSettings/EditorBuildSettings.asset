@@ -8,5 +8,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: a12776b7db5ff6c41bc9fc4cca087228
+  - enabled: 1
+    path: Assets/Scenes/CheeseMaker.unity
+    guid: 3e2aba296e13be241bb15cc180e372c4
+  - enabled: 1
+    path: Assets/Scenes/Judging.unity
+    guid: 5b434460fb888b24f93fcfee0755b21a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

@@ -5,11 +5,12 @@ public class GameplayLoop : MonoBehaviour
 {
     [Header("Script Reference")]
     [SerializeField] private UIController uIController;
-    [SerializeField] private OrderManager orderManager;
-    public GameplayPhase gameplayPhase;
+    public static OrderManager orderManager;
+    GameplayPhase gameplayPhase;
 
     void Start()
     {
+        orderManager = GameObject.Find("ScriptManagers/OrderManager").GetComponent<OrderManager>();
         //First part of game loop. Initialize the cheese we're using
         gameplayPhase = GameplayPhase.AddMilk;
         OrderManager.ongoingCheese = orderManager.FetchRandomCheese();
@@ -39,7 +40,14 @@ public class GameplayLoop : MonoBehaviour
         return (GameplayPhase)((int)phase + 1);
     }
 
+    public static void ResetCheeseData()
+    {
+        GameplayLoop.orderManager.usedCheeses.Clear();
+        OrderManager.ongoingCheese = null;
+        OrderManager.ongoingCheeseAttempt = null;
+    }
 }
+
 
 public enum GameplayPhase
 {
