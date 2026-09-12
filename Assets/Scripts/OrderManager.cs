@@ -13,9 +13,10 @@ public class OrderManager : MonoBehaviour
 
     [Header("Gameplay Acts")]
     [HideInInspector]
-    public Cheese ongoingCheese;
+    public static Cheese ongoingCheese;
+
     [HideInInspector]
-    public CheeseAttempt ongoingCheeseAttempt;
+    public static CheeseAttempt ongoingCheeseAttempt;
 
     void Start()
     {

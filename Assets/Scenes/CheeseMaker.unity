@@ -1759,7 +1759,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -242.17029}
-  m_SizeDelta: {x: 300, y: 101.9417}
+  m_SizeDelta: {x: 350, y: 101.9417}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1096975514
 MonoBehaviour:
@@ -3026,20 +3026,6 @@ MonoBehaviour:
     stinkiness: 1
     dryness: 2
   usedCheeses: []
-  ongoingCheese:
-    name: 
-    description: 
-    saltiness: 0
-    stinkiness: 0
-    dryness: 0
-  ongoingCheeseAttempt:
-    attemptName: 
-    amountOfSalt: 0
-    amountOfCulture: 0
-    amountOfAge: 0
-    saltFeedback: 
-    cultureFeedback: 
-    ageFeedback: 
 --- !u!1 &1778841240
 GameObject:
   m_ObjectHideFlags: 0
@@ -3443,7 +3429,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.0010014, y: -213.5}
-  m_SizeDelta: {x: 300, y: 44.606}
+  m_SizeDelta: {x: 350, y: 44.606}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1867694836
 MonoBehaviour:
@@ -3465,7 +3451,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Add Salt
+  m_text: Present the Cheese
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

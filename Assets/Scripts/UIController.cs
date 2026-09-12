@@ -23,8 +23,8 @@ public class UIController : MonoBehaviour
 
     public void SetCurrentOrderUI()
     {
-        cheeseOrderedTXT.text = orderManager.ongoingCheese.name;
-        descriptionOrderedTXT.text = $"\"{orderManager.ongoingCheese.description}\"";
+        cheeseOrderedTXT.text = OrderManager.ongoingCheese.name;
+        descriptionOrderedTXT.text = $"\"{OrderManager.ongoingCheese.description}\"";
     }
 
     public void SetPhaseText(GameplayPhase phase)
