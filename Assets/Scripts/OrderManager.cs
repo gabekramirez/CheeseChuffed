@@ -18,9 +18,9 @@ public class OrderManager : MonoBehaviour
     [HideInInspector]
     public static CheeseAttempt ongoingCheeseAttempt;
 
-    void Start()
+    void Awake()
     {
-        //Initialize the cheese list. When we finish a cheese we'll assign to this list so it isn't used twice
+        DontDestroyOnLoad(gameObject);
         usedCheeses = new List<string>();
     }
 
@@ -39,7 +39,7 @@ public class OrderManager : MonoBehaviour
         if(remainingCheeses.Count == 0)
             return null;
 
-        return remainingCheeses[UnityEngine.Random.Range(0, remainingCheeses.Count-1)];
+        return remainingCheeses[UnityEngine.Random.Range(0, remainingCheeses.Count)];
     }
 
 
