@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameplayLoop : MonoBehaviour
 {
@@ -21,6 +22,11 @@ public class GameplayLoop : MonoBehaviour
 
     public void AdvanceGamePlayPhase()
     {
+        if(gameplayPhase == GameplayPhase.Present)
+        {
+            SceneManager.LoadScene("Judging");
+        }
+
         gameplayPhase = GetNextGameplayPhase(gameplayPhase);
         uIController.SetPhaseText(gameplayPhase);
     }
