@@ -12,42 +12,46 @@ public class SaltDrag : MonoBehaviour
 
     private bool dragging = false;
     private Vector2 dragOffset;
+    private Vector3 homePosition;
+    const float positionSmooth = 5;
+    const float rotationSmooth = 5;
 
     private SpriteRenderer spriteRenderer;
     ParticleSystem saltParticles;
     private Vector2 potPosition;
     private Vector2 potSize;
     private bool overPot = false;
-    const float rotationTime = 0.2f;  // in seconds
     private float saltTime = 0.0f;
     private bool salting = false;
 
     private void Awake()
     {
+        homePosition = transform.position;
         spriteRenderer = GetComponent<SpriteRenderer>();
         saltParticles = GameObject.Find("Salt Particles").GetComponent<ParticleSystem>();
     }
 
     private void Update() {
         // handle z ordering
-        float frontLayer = GameObject.Find("Pot").GetComponent<PotDrag>().frontLayer;
         if (dragging) {
             if (!infront) {
-                frontLayer -= 1;
+                GameObject.Find("Pot").GetComponent<PotDrag>().frontLayer -= 1.0f;
+                float frontLayer = GameObject.Find("Pot").GetComponent<PotDrag>().frontLayer;
                 transform.position = new Vector3(transform.position.x, transform.position.y, frontLayer);
             }
             infront = true;
         } else {
             infront = false;
+            transform.position = Vector3.Slerp(transform.position, homePosition, Time.deltaTime * positionSmooth);
         }
 
         // handle rotation
         if (overPot) {
             Quaternion target = Quaternion.Euler(0, 0, 180);
-            transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime / rotationTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * rotationSmooth);
         } else {
             Quaternion target = Quaternion.Euler(0, 0, 0);
-            transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime / rotationTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * rotationSmooth);
         }
 
         // hande particles
