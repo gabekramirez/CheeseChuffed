@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "UnityGitTest.slnx"
+    "dotnet.defaultSolution": "Cheese Chuffed.slnx"
 }
