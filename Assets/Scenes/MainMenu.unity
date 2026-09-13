@@ -6244,7 +6244,8 @@ MonoBehaviour:
   sfxVolume: 1
   ambientTracks: []
   ambientCrossfade: 2
-  musicTracks: []
+  musicTracks:
+  - {fileID: 8300000, guid: 0924d7cc08a7a0c4aa992c251e00fca0, type: 3}
   musicCrossfade: 1.5
   loopTrack: {fileID: 8300000, guid: 0924d7cc08a7a0c4aa992c251e00fca0, type: 3}
   autoPlayLoopTrack: 1
