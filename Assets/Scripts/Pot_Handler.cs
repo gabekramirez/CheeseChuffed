@@ -7,7 +7,7 @@ public class Pot_Handler : MonoBehaviour
    public void itemDropped(GameObject item)
     {
         print(item.name);
-        if (item.name.Contains("Salt"))
+        if (item.name.StartsWith("Salt"))
         {
             Destroy(item);
         }
