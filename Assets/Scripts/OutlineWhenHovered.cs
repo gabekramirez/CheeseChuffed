@@ -14,11 +14,11 @@ public class OutlineWhenHovered : MonoBehaviour
         material = GetComponent<Renderer>().material;
     }
 
-    public void OnMouseEnter() {
+    public void HoverOn() {
         material.SetInt("_Hovered", 1);
     }
 
-    public void OnMouseExit() {
+    public void HoverOff() {
         material.SetInt("_Hovered", 0);
     }
 }

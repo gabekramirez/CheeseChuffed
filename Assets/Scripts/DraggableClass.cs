@@ -14,36 +14,63 @@ using UnityEngine;
 public class DraggableClass : MonoBehaviour
 {
 
-    private Vector3 initial_position;
-    private bool isHeld = false;
+    public Vector3 initial_position;
+    public bool isHeld = false;
     private bool isTracing = false;
 
     private bool isReturning = false;
     private GameObject current_collider;
 
-    
+    public float zRot = 0.0f;
 
     const float MAX_DISTANCE = 25.0f;
     const float MAX_SPEED = 400.0f;
-
+    public Texture2D hand_icon;
+    public Texture2D grip_icon;
     Vector3 mouse_position;
+
+    public GameObject pot;
 
     void Awake()
     {
         initial_position = gameObject.transform.position;
     }
 
+    void OnMouseOver()
+    {
+        if (!isHeld)
+        {
+           gameObject.SendMessage("HoverOn"); 
+        }
+        
+    }
+    void OnMouseExit()
+    {
+        if (!isHeld)
+        {
+           gameObject.SendMessage("HoverOff"); 
+        }
+        
+    }
     public void OnMouseDown()
     {
-        
+        Cursor.SetCursor(grip_icon, new Vector2(16,16), CursorMode.Auto);
         isHeld = true;
         gameObject.transform.localScale = Vector3.one * 1.1f;
-        gameObject.transform.eulerAngles = Vector3.forward * 10f;
+        gameObject.transform.eulerAngles = Vector3.forward * (10f + zRot);
+        gameObject.SendMessage("HoverOff");
+        if (pot)
+        {
+            pot.SendMessage("HoverOn");
+        }
     }
 
     public void OnMouseUp()
     {
-        
+        if (!isHeld){
+            return;
+        }
+        Cursor.SetCursor(hand_icon, new Vector2(16f,16f), CursorMode.Auto);
         isHeld = false;
         if ((gameObject.transform.position - mouse_position).magnitude > 0.0f)
         {
@@ -54,8 +81,12 @@ public class DraggableClass : MonoBehaviour
         {
             onDrop();
         }
+        if (pot)
+        {
+            pot.SendMessage("HoverOff");
+        }
         gameObject.transform.localScale = Vector3.one;
-        gameObject.transform.eulerAngles = Vector3.zero;
+        gameObject.transform.eulerAngles = new Vector3(0,0,zRot);
     }
 
     void Update()
@@ -102,6 +133,7 @@ public class DraggableClass : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collider)
     {
+        print("collided on main script");
         current_collider = collider.gameObject;
         
     }

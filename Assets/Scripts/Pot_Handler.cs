@@ -4,12 +4,23 @@ using UnityEngine;
 
 public class Pot_Handler : MonoBehaviour
 {
+
+    public Level_Controller level_controller;
+
    public void itemDropped(GameObject item)
     {
         //print(item.name);
         if (item.name.Contains("Salt") || item.name.Contains("Bacteria"))
         {
             Destroy(item);
+            if (item.name.Contains("Salt"))
+            {
+                level_controller.add_ingredient(0);
+            }
+            else
+            {
+                level_controller.add_ingredient(1);
+            }
         }
     }
 
