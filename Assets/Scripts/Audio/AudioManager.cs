@@ -694,4 +694,9 @@ public class AudioManager : MonoBehaviour
         src.volume = targetVol;
         if (targetVol <= 0f) src.Stop();
     }
+
+    public void ChangeSceneMusic(AudioClip newClip)
+{
+    SetLoopTrack(newClip, true, true);
+}
 }

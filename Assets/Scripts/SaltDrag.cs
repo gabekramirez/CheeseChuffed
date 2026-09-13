@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Collections;
-using UnityEditor.UI;
+using UnityEngine.UI;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]

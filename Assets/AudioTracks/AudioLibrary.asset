@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioLibrary
   ambientTracks: []
   musicTracks:
-  - {fileID: 0}
-  sfx: []
+  - {fileID: 8300000, guid: 0924d7cc08a7a0c4aa992c251e00fca0, type: 3}
+  sfx:
+  - name: Click
+    clip: {fileID: 8300000, guid: 1f5ad20e71de891418c939fa7d301ea7, type: 3}
