@@ -9,6 +9,10 @@ public class JudgeManager : MonoBehaviour
     [SerializeField] private JudgeUI judgeUI;
     public Cheese temporaryCheese;
     public CheeseAttempt temporaryCheeseAttempt;
+    public List<string> judgeNames;
+
+    [Header("Scoring")]
+    public float scoringThreshold;
 
     [Header("Timing")]
     public float startDelay = 1f;
@@ -17,12 +21,13 @@ public class JudgeManager : MonoBehaviour
     public float arrowAnimationDelay = 2f;
     public float dialogDelay = 3f;
     public float judgeEndDelay = 1f;
+    public float pullUpTime = 1f;
 
     void Start()
     {
         //VERY TEMPORARY
-        OrderManager.ongoingCheese = temporaryCheese;
-        OrderManager.ongoingCheeseAttempt = temporaryCheeseAttempt;
+        //OrderManager.ongoingCheese = temporaryCheese;
+        //OrderManager.ongoingCheeseAttempt = temporaryCheeseAttempt;
 
 
         judgeUI.OpenJudgingScene();
@@ -32,6 +37,7 @@ public class JudgeManager : MonoBehaviour
         //Spawn the three cheeses in as the scene starts
         float sceneDelay = startDelay;
         ExecuteAfterTime(startDelay, () => judgeUI.TurnCheesesOn());
+        bool anyDistanceGreaterThanThreshold = false;
 
         //Move through the judges, first moving the indicator, then the rating wheel, then the cheese nibbling,
         for (int judgeIdx = 0; judgeIdx < 3; judgeIdx++)
@@ -56,6 +62,10 @@ public class JudgeManager : MonoBehaviour
 
             //Calculate score difference 
             int scoreDifference = GetDifference(judgeNumber);
+            SetFailureFeedback();
+
+            if(Mathf.Abs(scoreDifference)>scoringThreshold)
+                anyDistanceGreaterThanThreshold = true;
 
             // Delay setting the actual feedback data
             ExecuteAfterTime(sceneDelay, () => SetFeedback(judgeNumber));
@@ -79,9 +89,27 @@ public class JudgeManager : MonoBehaviour
             
         }
         //Then move through dialog, set the rating, and add the feedback to the board
+        ExecuteAfterTime(sceneDelay, ()=>judgeUI.HideAllIndicators());
+        sceneDelay += pullUpTime;
 
+        if(anyDistanceGreaterThanThreshold)
+            ExecuteAfterTime(sceneDelay, ()=> judgeUI.OpenFailurePanel());
+        else
+            ExecuteAfterTime(sceneDelay, ()=> judgeUI.OpenSuccessPanel());
 
+        //Hide indicators, show the failure or success screen
      //   ExecuteAfterTime(2, )
+    }   
+
+    public void SetFailureFeedback()
+    {
+        string failureString = "";
+
+        for(int i = 0; i < 3; i++)
+            failureString += $"Judge {judgeNames[i]} said it was \"{GetFeedback(i)}\" \n";
+
+        judgeUI.feedbackTXT.text = failureString;
+
     }
 
     public void SetFeedback(int category)

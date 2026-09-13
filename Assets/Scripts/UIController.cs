@@ -37,14 +37,14 @@ public class UIController : MonoBehaviour
         // Clear the UI
         DestroyAllChildren(ordersParent);
 
-        int totalAttempts = orderManager.previousCheeseAttempts.Count;
+        int totalAttempts = OrderManager.previousCheeseAttempts.Count;
 
         if(totalAttempts == 0) return;
 
         //Go through in reverse order so latest is at the top
         for (int i = totalAttempts - 1; i >= 0; i--)
         {
-            CheeseAttempt cheeseAttempt = orderManager.previousCheeseAttempts[i];
+            CheeseAttempt cheeseAttempt = OrderManager.previousCheeseAttempts[i];
 
             //Minimized
             GameObject newMinimizedAttemptObject = Instantiate(orderMinimizedPrefab);

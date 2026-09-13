@@ -6,10 +6,12 @@ public class OrderManager : MonoBehaviour
 {
     [Header("Lists")]
     [HideInInspector]
-    public List<CheeseAttempt> previousCheeseAttempts;
-    public List<Cheese> cheeses;
+    public static List<CheeseAttempt> previousCheeseAttempts;
+    public static List<Cheese> cheeses;
+    public List<Cheese> initializedCheeses;
+
     [HideInInspector]
-    public List<string> usedCheeses;
+    public static List<string> usedCheeses;
 
     [Header("Gameplay Acts")]
     [HideInInspector]
@@ -22,15 +24,18 @@ public class OrderManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         usedCheeses = new List<string>();
+
+        OrderManager.cheeses = initializedCheeses;
+      
     }
 
-
-    public Cheese FetchRandomCheese()
+ 
+    public static Cheese FetchRandomCheese()
     {
         List<Cheese> remainingCheeses = new List<Cheese>();
-        foreach(Cheese cheese in cheeses)
+        foreach(Cheese cheese in OrderManager.cheeses)
         {
-            if (!usedCheeses.Contains(cheese.name))
+            if (!OrderManager.usedCheeses.Contains(cheese.name))
             {
                 remainingCheeses.Add(cheese);   
             }
@@ -72,4 +77,19 @@ public class CheeseAttempt
     public string saltFeedback;
     public string cultureFeedback;
     public string ageFeedback;
+
+    // Creates and returns a new independent copy of this attempt
+    public CheeseAttempt Copy()
+    {
+        return new CheeseAttempt
+        {
+            attemptName = this.attemptName,
+            amountOfSalt = this.amountOfSalt,
+            amountOfCulture = this.amountOfCulture,
+            amountOfAge = this.amountOfAge,
+            saltFeedback = this.saltFeedback,
+            cultureFeedback = this.cultureFeedback,
+            ageFeedback = this.ageFeedback
+        };
+    }
 }

@@ -14,7 +14,7 @@ public class JudgeUI : MonoBehaviour
 
     [Header("Failure Panel")]
     [SerializeField] private GameObject failurePanel;
-    [SerializeField] private TMP_Text feedbackTXT;
+    public TMP_Text feedbackTXT;
 
     [Header("Final Results Panel")]
     [SerializeField] private GameObject finalResultsPanel;
@@ -264,6 +264,11 @@ public class JudgeUI : MonoBehaviour
             finalLocalPosition;
     }
 
+    public void HideAllIndicators()
+    {
+        currentlyJudgingIndicator.transform.GetComponent<Fade>().FadeOut();
+        scoringBlockObject.transform.GetComponent<Fade>().FadeOut();
+    }
 
     public void OpenSuccessPanel()
     {
@@ -275,6 +280,12 @@ public class JudgeUI : MonoBehaviour
     public void AcceptNewCheese()
     {
         // Go back to the kitchen with a new cheese.
+        OrderManager.previousCheeseAttempts.Clear();
+        OrderManager.ongoingCheeseAttempt = new CheeseAttempt();
+        OrderManager.ongoingCheese = OrderManager.FetchRandomCheese();
+
+        SceneManager.LoadScene("CheeseMaker");
+
     }
 
 
@@ -282,6 +293,8 @@ public class JudgeUI : MonoBehaviour
     {
         // Pull up final results panel.
         finalResultsPanel.SetActive(true);
+
+        //And final game data
 
         cheesesMadeTXT.text = "";
         averageAttemptsTXT.text = "";
@@ -305,12 +318,14 @@ public class JudgeUI : MonoBehaviour
     public void OpenFailurePanel()
     {
         failurePanel.SetActive(true);
-        feedbackTXT.text = "";
     }
 
 
     public void ReturnToTryAgain()
     {
+        OrderManager.previousCheeseAttempts??= new List<CheeseAttempt>();
+        OrderManager.previousCheeseAttempts.Add(OrderManager.ongoingCheeseAttempt.Copy());
+        OrderManager.ongoingCheeseAttempt = new CheeseAttempt();
         SceneManager.LoadScene("CheeseMaker");
     }
 

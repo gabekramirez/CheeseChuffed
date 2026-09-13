@@ -2890,8 +2890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e75ab988ade2945a260cebf9d436bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OrderManager
-  previousCheeseAttempts: []
-  cheeses:
+  initializedCheeses:
   - name: Cheddar
     description: A firm, sharp cheese.
     saltiness: 6
@@ -3042,7 +3041,6 @@ MonoBehaviour:
     saltiness: 3
     stinkiness: 1
     dryness: 2
-  usedCheeses: []
 --- !u!1 &1726564488
 GameObject:
   m_ObjectHideFlags: 0
