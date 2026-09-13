@@ -13,12 +13,21 @@ public class DraggableClass : MonoBehaviour
     private bool isHeld = false;
     private bool isTracing = false;
     private bool isReturning = false;
+<<<<<<< Updated upstream
     
     // Updated: Now storing Collider2D instead of the Collision2D event
     public List<Collider2D> current_colliders = new List<Collider2D>();
 
     const float MAX_DISTANCE = 25.0f;
     const float MAX_SPEED = 450.0f; // units per second (tune to taste)
+=======
+    private GameObject current_collider;
+
+    
+
+    const float MAX_DISTANCE = 25.0f;
+    const float MAX_SPEED = 400.0f;
+>>>>>>> Stashed changes
 
     Vector3 mouse_position;
 
@@ -29,6 +38,10 @@ public class DraggableClass : MonoBehaviour
 
     public void OnMouseDown()
     {
+<<<<<<< Updated upstream
+=======
+        
+>>>>>>> Stashed changes
         isHeld = true;
         gameObject.transform.localScale = Vector3.one * 1.1f;
         gameObject.transform.eulerAngles = Vector3.forward * 10f;
@@ -73,6 +86,10 @@ public class DraggableClass : MonoBehaviour
             goal_distance = mouse_position - frame_position;
         }
         
+<<<<<<< Updated upstream
+=======
+        
+>>>>>>> Stashed changes
         Vector3 frame_direction = goal_distance.normalized * Math.Clamp(goal_distance.magnitude/MAX_DISTANCE, 0, 1) * MAX_SPEED * Time.deltaTime;
         frame_position += frame_direction;
 
@@ -93,8 +110,17 @@ public class DraggableClass : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+<<<<<<< Updated upstream
         // Updated: Store the specific collider we hit
         if (!current_colliders.Contains(collision.collider))
+=======
+        current_collider = collider.gameObject;
+        
+    }
+    void OnCollisionExit2D(Collision2D collider)
+    {
+        if (current_collider == collider.gameObject)
+>>>>>>> Stashed changes
         {
             current_colliders.Add(collision.collider);
         }
@@ -110,6 +136,7 @@ public class DraggableClass : MonoBehaviour
     {
         //will add complexity later
         isReturning = true;
+<<<<<<< Updated upstream
 
         // Updated: Iterate through the stored colliders
         foreach (Collider2D col in current_colliders)
@@ -120,6 +147,15 @@ public class DraggableClass : MonoBehaviour
                 Debug.Log(col.gameObject.tag);
                 col.gameObject.SendMessage("itemDropped", gameObject);
             }
+=======
+        
+        
+        
+        if (current_collider != null && current_collider.tag == "Interactable")
+        {
+            current_collider.SendMessage("itemDropped", gameObject);
+
+>>>>>>> Stashed changes
         }
     }
 }
