@@ -5,29 +5,26 @@ using Unity.Collections;
 using UnityEditor.UI;
 using UnityEngine;
 
+
+
 [RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(BoxCollider2D))]
+
+
 public class DraggableClass : MonoBehaviour
 {
+
     private Vector3 initial_position;
     private bool isHeld = false;
     private bool isTracing = false;
-    private bool isReturning = false;
-<<<<<<< Updated upstream
-    
-    // Updated: Now storing Collider2D instead of the Collision2D event
-    public List<Collider2D> current_colliders = new List<Collider2D>();
 
-    const float MAX_DISTANCE = 25.0f;
-    const float MAX_SPEED = 450.0f; // units per second (tune to taste)
-=======
+    private bool isReturning = false;
     private GameObject current_collider;
 
     
 
     const float MAX_DISTANCE = 25.0f;
     const float MAX_SPEED = 400.0f;
->>>>>>> Stashed changes
 
     Vector3 mouse_position;
 
@@ -38,10 +35,7 @@ public class DraggableClass : MonoBehaviour
 
     public void OnMouseDown()
     {
-<<<<<<< Updated upstream
-=======
         
->>>>>>> Stashed changes
         isHeld = true;
         gameObject.transform.localScale = Vector3.one * 1.1f;
         gameObject.transform.eulerAngles = Vector3.forward * 10f;
@@ -49,6 +43,7 @@ public class DraggableClass : MonoBehaviour
 
     public void OnMouseUp()
     {
+        
         isHeld = false;
         if ((gameObject.transform.position - mouse_position).magnitude > 0.0f)
         {
@@ -67,6 +62,7 @@ public class DraggableClass : MonoBehaviour
     {
         if (!isHeld && !isTracing && !isReturning)
         {
+            
             return;
         }
         Vector3 frame_position = gameObject.transform.position;
@@ -86,10 +82,7 @@ public class DraggableClass : MonoBehaviour
             goal_distance = mouse_position - frame_position;
         }
         
-<<<<<<< Updated upstream
-=======
         
->>>>>>> Stashed changes
         Vector3 frame_direction = goal_distance.normalized * Math.Clamp(goal_distance.magnitude/MAX_DISTANCE, 0, 1) * MAX_SPEED * Time.deltaTime;
         frame_position += frame_direction;
 
@@ -98,8 +91,7 @@ public class DraggableClass : MonoBehaviour
             frame_position = mouse_position;
             isTracing = false;
             onDrop();
-        }
-        else if (isReturning && goal_distance.magnitude < .1f)
+        }else if (isReturning && goal_distance.magnitude < .1f)
         {
             frame_position = initial_position;
             isReturning = false;
@@ -108,46 +100,23 @@ public class DraggableClass : MonoBehaviour
         gameObject.transform.position = frame_position;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collider)
     {
-<<<<<<< Updated upstream
-        // Updated: Store the specific collider we hit
-        if (!current_colliders.Contains(collision.collider))
-=======
         current_collider = collider.gameObject;
         
     }
     void OnCollisionExit2D(Collision2D collider)
     {
         if (current_collider == collider.gameObject)
->>>>>>> Stashed changes
         {
-            current_colliders.Add(collision.collider);
+            current_collider = null;
         }
-    }
-
-    void OnCollisionExit2D(Collision2D collision)
-    {
-        // Updated: Remove the specific collider we just stopped touching
-        current_colliders.Remove(collision.collider);
     }
 
     void onDrop()
     {
         //will add complexity later
         isReturning = true;
-<<<<<<< Updated upstream
-
-        // Updated: Iterate through the stored colliders
-        foreach (Collider2D col in current_colliders)
-        {
-            // Updated: Check the tag of the object we actually collided with
-            if (col.gameObject.CompareTag("Interactable"))
-            {
-                Debug.Log(col.gameObject.tag);
-                col.gameObject.SendMessage("itemDropped", gameObject);
-            }
-=======
         
         
         
@@ -155,7 +124,8 @@ public class DraggableClass : MonoBehaviour
         {
             current_collider.SendMessage("itemDropped", gameObject);
 
->>>>>>> Stashed changes
         }
+        
     }
+
 }
