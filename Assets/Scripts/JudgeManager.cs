@@ -48,8 +48,14 @@ public class JudgeManager : MonoBehaviour
             //Move the arrow
             ExecuteAfterTime(
                 sceneDelay,
-                () => judgeUI.SetJudgeIndicator(judgeNumber)
+                () => {
+                    judgeUI.SetJudgeIndicator(judgeNumber);
+                    judgeUI.JudgeEat(judgeNumber);
+                }
             );
+
+            //Play eating sound
+            
 
             //Move the block with its arrow.
             //Reset the arrow to its centred position
@@ -73,13 +79,16 @@ public class JudgeManager : MonoBehaviour
             sceneDelay += arrowAnimationDelay;
             ExecuteAfterTime(
                 sceneDelay, 
-                ()=>judgeUI.AnimateArrow(scoreDifference)
+                () => judgeUI.AnimateArrow(scoreDifference)
             );
 
             sceneDelay += dialogDelay;
             ExecuteAfterTime(
                 sceneDelay, 
-                ()=>judgeUI.SetYourAttempt()
+                () => {
+                    judgeUI.SetYourAttempt();
+                    judgeUI.JudgeEek(scoreDifference);
+                }
             );
 
             sceneDelay += judgeEndDelay;           

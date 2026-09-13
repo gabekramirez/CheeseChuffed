@@ -6,7 +6,7 @@ public class UIAudio : MonoBehaviour
 
     public void PlayAudio(string track)
     {
-        AudioManager.Instance.PlayClick(library.GetSFX(track));
+        AudioManager.Instance.PlaySFX(library.GetSFX(track));
     }    
 
 }

@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System.Data.Common;
+using Unity.VisualScripting;
 
 public class JudgeUI : MonoBehaviour
 {
@@ -43,8 +45,15 @@ public class JudgeUI : MonoBehaviour
     private Vector3 scoreBlockStartPosition;
 
     [Header("Table Cheeses")]
-    public List<GameObject> tableCheese;
+    public List<JudgeCheese> tableCheese;
     public float cheeseTiming = 1f;
+
+    [Header("Animation")]
+    public List<JudgeSprite> judgeSprites;
+    public float eatTime = 2f;
+
+    [Header("Sound")]
+    [SerializeField] private UIAudio uiAudio;
 
 
     private void Awake()
@@ -74,7 +83,7 @@ public class JudgeUI : MonoBehaviour
         SetYourAttempt();
 
         // Set the plate cheeses off initially then turn on.
-        foreach (GameObject cheese in tableCheese)
+        foreach (JudgeCheese cheese in tableCheese)
         {
             cheese.SetActive(false);
         }
@@ -122,6 +131,32 @@ public class JudgeUI : MonoBehaviour
 
     }
 
+    public void JudgeEat(int judgeNumber)
+    {
+        if (judgeNumber >= 0) {
+            judgeSprites[judgeNumber].eating = true;
+            tableCheese[judgeNumber].eating = true;
+            uiAudio.PlayAudio("Chew" + UnityEngine.Random.Range(1, 5).ToString());
+            ExecuteAfterTime(
+                eatTime,
+                () => {
+                    judgeSprites[judgeNumber].eating = false;
+                    tableCheese[judgeNumber].eating = false;
+                    tableCheese[judgeNumber].SetActive(false);
+                }
+            );
+        }
+    }
+
+    public void JudgeEek(float scoreDifference)
+    {
+        int eek = (int)scoreDifference;
+        eek += UnityEngine.Random.Range(-1, 1);
+        if (eek < 0) {eek = -eek;}
+        eek += 1;
+        if (eek > 9) {eek = 9;}
+        uiAudio.PlayAudio("Eek" + eek.ToString());
+    }
 
     public void SetJudgeIndicator(int judgeNumber)
     {
@@ -132,7 +167,6 @@ public class JudgeUI : MonoBehaviour
             judgeNumber
         );
     }
-
 
     public void SetScoringIndicator(int judgeNumber)
     {

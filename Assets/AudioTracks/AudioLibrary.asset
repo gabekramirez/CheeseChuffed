@@ -18,3 +18,31 @@ MonoBehaviour:
   sfx:
   - name: Click
     clip: {fileID: 8300000, guid: 1f5ad20e71de891418c939fa7d301ea7, type: 3}
+  - name: Chew1
+    clip: {fileID: 8300000, guid: 10c213431a83e5e4a9a21aa2339e3974, type: 3}
+  - name: Chew2
+    clip: {fileID: 8300000, guid: 765cf75a871ae614295ff7a04ac61088, type: 3}
+  - name: Chew3
+    clip: {fileID: 8300000, guid: e6d58f997aad36b4ebc202a0096e595f, type: 3}
+  - name: Chew4
+    clip: {fileID: 8300000, guid: d35f40e717b0d7449947d81742aa6b84, type: 3}
+  - name: Chew5
+    clip: {fileID: 8300000, guid: e123b66e9b3a1894eb60df719f945601, type: 3}
+  - name: Eek1
+    clip: {fileID: 8300000, guid: e8c40c70ff330f34584ea412e3a59c46, type: 3}
+  - name: Eek2
+    clip: {fileID: 8300000, guid: b1814b86f47222f40aca60708681af99, type: 3}
+  - name: Eek3
+    clip: {fileID: 8300000, guid: 32e32ad0160089d4fa38893e95e20f83, type: 3}
+  - name: Eek4
+    clip: {fileID: 8300000, guid: 8a4b342996a0c3f469f6eedc3b9bfe58, type: 3}
+  - name: Eek5
+    clip: {fileID: 8300000, guid: a15fe9057e74a1241a31340e53c177a8, type: 3}
+  - name: Eek6
+    clip: {fileID: 8300000, guid: 54c3bfd5a3d6d6f4d8159476be711a48, type: 3}
+  - name: Eek7
+    clip: {fileID: 8300000, guid: 92995b1bc1b42e54b8ebe5bb64f7e115, type: 3}
+  - name: Eek8
+    clip: {fileID: 8300000, guid: a25b539619d075c4595e6ae076918c98, type: 3}
+  - name: Eek9
+    clip: {fileID: 8300000, guid: 44fa7c6052d1de2408a5e84adc4c27d6, type: 3}
