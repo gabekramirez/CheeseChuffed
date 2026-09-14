@@ -189,7 +189,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.8, y: 2.1}
+    oldSize: {x: 1.4, y: 1.9}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -212,8 +212,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1290519507}
 --- !u!212 &42721073
 SpriteRenderer:
@@ -360,7 +360,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.8, y: 2.1}
+    oldSize: {x: 1.4, y: 1.9}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -383,8 +383,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1290519507}
 --- !u!212 &244363325
 SpriteRenderer:
@@ -531,7 +531,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4, y: 2}
+    oldSize: {x: 1.3, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -554,8 +554,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1290519507}
 --- !u!212 &316639376
 SpriteRenderer:
@@ -702,7 +702,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4, y: 2}
+    oldSize: {x: 1.3, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -725,8 +725,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1290519507}
 --- !u!212 &322062814
 SpriteRenderer:
@@ -873,7 +873,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.8, y: 2.1}
+    oldSize: {x: 1.4, y: 1.9}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -896,8 +896,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1290519507}
 --- !u!212 &323651254
 SpriteRenderer:
@@ -1044,7 +1044,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4, y: 2}
+    oldSize: {x: 1.3, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1067,8 +1067,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1290519507}
 --- !u!212 &413672338
 SpriteRenderer:
@@ -1255,8 +1255,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1290519507}
 --- !u!61 &459510393
 BoxCollider2D:
@@ -1296,7 +1296,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4, y: 2}
+    oldSize: {x: 1.3, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1394,7 +1394,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
 --- !u!4 &829568365
@@ -1440,6 +1440,8 @@ MonoBehaviour:
   rotator: {fileID: 1287162022}
   hasCheese: 0
   cheese_sprite: {fileID: 852399402}
+  full_sprite: {fileID: 0}
+  empty_sprite: {fileID: 0}
 --- !u!50 &829568368
 Rigidbody2D:
   serializedVersion: 5
@@ -1590,7 +1592,7 @@ SpriteRenderer:
   m_Size: {x: 2.8, y: 1.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
 --- !u!4 &852399404
@@ -1754,7 +1756,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4, y: 2}
+    oldSize: {x: 1.3, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1777,8 +1779,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1290519507}
 --- !u!212 &1246724403
 SpriteRenderer:
@@ -1925,7 +1927,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4, y: 2}
+    oldSize: {x: 1.3, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1948,8 +1950,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1290519507}
 --- !u!212 &1261600014
 SpriteRenderer:
@@ -2136,7 +2138,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
 --- !u!4 &1290519502
@@ -2168,6 +2170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Pot_Handler
   level_controller: {fileID: 1652803446}
   full_icon: {fileID: -5160660819957252609, guid: 3a3fde47c68ea1b428af5b215c966cab, type: 3}
+  has_milk: 0
 --- !u!61 &1290519505
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2323,7 +2326,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4, y: 2}
+    oldSize: {x: 1.3, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2346,8 +2349,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1290519507}
 --- !u!212 &1335664170
 SpriteRenderer:
@@ -2665,7 +2668,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.8, y: 2.1}
+    oldSize: {x: 1.4, y: 1.9}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2688,8 +2691,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1290519507}
 --- !u!212 &1417750768
 SpriteRenderer:
@@ -2908,7 +2911,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
 --- !u!4 &1446993889
@@ -2950,6 +2953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3193f3ee2acc1ef45a0e1a1458a1671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spoon_Script
+  pot: {fileID: 0}
 --- !u!1 &1484243046
 GameObject:
   m_ObjectHideFlags: 0
@@ -3112,7 +3116,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4, y: 2}
+    oldSize: {x: 1.3, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3135,8 +3139,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1290519507}
 --- !u!212 &1603289564
 SpriteRenderer:
@@ -3283,7 +3287,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4, y: 2}
+    oldSize: {x: 1.3, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3306,8 +3310,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1290519507}
 --- !u!212 &1636391922
 SpriteRenderer:
@@ -3501,7 +3505,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.8, y: 2.1}
+    oldSize: {x: 1.4, y: 1.9}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3524,8 +3528,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1290519507}
 --- !u!212 &1713339157
 SpriteRenderer:
@@ -3660,7 +3664,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.8, y: 2.1}
+    oldSize: {x: 1.4, y: 1.9}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3683,8 +3687,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1290519507}
 --- !u!212 &1795090213
 SpriteRenderer:
@@ -4164,7 +4168,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.8, y: 2.1}
+    oldSize: {x: 1.4, y: 1.9}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4187,8 +4191,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1290519507}
 --- !u!212 &2090729795
 SpriteRenderer:
@@ -4418,6 +4422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Lever_Control
   Ager: {fileID: 829568367}
+  Held_Sprite: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
