@@ -152,7 +152,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -261,7 +261,7 @@ TextureImporter:
         serializedVersion: 2
         x: 2
         y: 456
-        width: 28
+        width: 29
         height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -482,7 +482,7 @@ TextureImporter:
         x: 63
         y: 380
         width: 37
-        height: 11
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -545,9 +545,9 @@ TextureImporter:
       name: spoon
       rect:
         serializedVersion: 2
-        x: 4
-        y: 333
-        width: 8
+        x: 15
+        y: 165
+        width: 9
         height: 25
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -634,7 +634,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 63
-        y: 333
+        y: 167
         width: 9
         height: 16
       alignment: 0
@@ -703,8 +703,8 @@ TextureImporter:
         y: 321
         width: 14
         height: 31
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.14305279, y: 0.032890074}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -725,8 +725,8 @@ TextureImporter:
         y: 332
         width: 11
         height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.7445852, y: 0.6258087}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -765,12 +765,12 @@ TextureImporter:
       name: agecheese
       rect:
         serializedVersion: 2
-        x: 2
-        y: 213
+        x: 5
+        y: 204
         width: 53
         height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.51, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -787,8 +787,8 @@ TextureImporter:
       name: age
       rect:
         serializedVersion: 2
-        x: 55
-        y: 214
+        x: 68
+        y: 204
         width: 53
         height: 55
       alignment: 0
@@ -919,9 +919,9 @@ TextureImporter:
       name: potempty
       rect:
         serializedVersion: 2
-        x: 77
+        x: 78
         y: 433
-        width: 44
+        width: 43
         height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -946,7 +946,7 @@ TextureImporter:
         width: 31
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []

@@ -16,7 +16,7 @@ public class JudgeSprite : MonoBehaviour
     }
 
     private void Update() {
-        if (eating | math.abs(transform.position.y - startY) > 0.1f) {
+        if (eating || math.abs(transform.position.y - startY) > 0.1f) {
             eatTime += Time.deltaTime;
             transform.position = new Vector3(transform.position.x, transform.position.y - 0.01f * (float)Math.Sin(eatTime * 10.0f), transform.position.z);
         } else {

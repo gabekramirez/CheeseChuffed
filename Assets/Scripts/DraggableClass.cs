@@ -80,7 +80,7 @@ public class DraggableClass : MonoBehaviour
     }
     public void OnMouseDown()
     {
-        Cursor.SetCursor(grip_icon, new Vector2(16,16), CursorMode.Auto);
+        Cursor.SetCursor(grip_icon, new Vector2(0f,0f), CursorMode.Auto);
         isHeld = true;
         gameObject.transform.localScale *= 1.1f;
         gameObject.transform.eulerAngles = Vector3.forward * (10f + zRot);
@@ -108,7 +108,7 @@ public class DraggableClass : MonoBehaviour
         if (!isHeld){
             return;
         }
-        Cursor.SetCursor(hand_icon, new Vector2(16f,16f), CursorMode.Auto);
+        Cursor.SetCursor(hand_icon, new Vector2(0f,0f), CursorMode.Auto);
         isHeld = false;
         if ((gameObject.transform.position - mouse_position).magnitude > 0.0f)
         {
