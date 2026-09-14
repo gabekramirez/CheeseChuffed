@@ -30,8 +30,9 @@ public class Level_Controller : MonoBehaviour
             age_level++;
             if (age_level >= 10)
             {
-                age_machine.removeCheese();
-                
+                remove_cheese();
+
+                print("cheese aged");
             }
         }
     }

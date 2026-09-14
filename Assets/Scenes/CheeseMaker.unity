@@ -332,8 +332,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1815647307}
 --- !u!61 &94647347
 BoxCollider2D:
@@ -577,8 +577,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1815647307}
 --- !u!61 &136757945
 BoxCollider2D:
@@ -1222,8 +1222,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1815647307}
 --- !u!61 &263698795
 BoxCollider2D:
@@ -1685,8 +1685,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1815647307}
 --- !u!61 &513441706
 BoxCollider2D:
@@ -1930,8 +1930,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1815647307}
 --- !u!61 &546776494
 BoxCollider2D:
@@ -2209,8 +2209,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1815647307}
 --- !u!61 &584273565
 BoxCollider2D:
@@ -2446,8 +2446,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1815647307}
 --- !u!61 &722919926
 BoxCollider2D:
@@ -2646,8 +2646,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1815647307}
 --- !u!61 &742243767
 BoxCollider2D:
@@ -3333,8 +3333,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1815647307}
 --- !u!61 &1119451695
 BoxCollider2D:
@@ -3560,8 +3560,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1815647307}
 --- !u!61 &1119570463
 BoxCollider2D:
@@ -3841,8 +3841,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1815647307}
 --- !u!61 &1277193140
 BoxCollider2D:
@@ -4181,8 +4181,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1815647307}
 --- !u!61 &1385453744
 BoxCollider2D:
@@ -4753,8 +4753,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1815647307}
 --- !u!61 &1445208114
 BoxCollider2D:
@@ -4953,8 +4953,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1815647307}
 --- !u!61 &1445342978
 BoxCollider2D:
@@ -5153,8 +5153,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1815647307}
 --- !u!61 &1472550090
 BoxCollider2D:
@@ -5705,8 +5705,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1815647307}
 --- !u!61 &1581136227
 BoxCollider2D:
@@ -5880,8 +5880,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 180
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1815647307}
 --- !u!61 &1629245542
 BoxCollider2D:
@@ -6092,8 +6092,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1815647307}
 --- !u!61 &1637325164
 BoxCollider2D:
@@ -11539,8 +11539,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1815647307}
 --- !u!61 &1819334971
 BoxCollider2D:
@@ -11739,8 +11739,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1815647307}
 --- !u!61 &1849363449
 BoxCollider2D:
@@ -12076,8 +12076,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1815647307}
 --- !u!61 &1878442851
 BoxCollider2D:
@@ -12276,8 +12276,8 @@ MonoBehaviour:
   initial_position: {x: 0, y: 0, z: 0}
   isHeld: 0
   zRot: 0
-  hand_icon: {fileID: 0}
-  grip_icon: {fileID: 0}
+  hand_icon: {fileID: 2800000, guid: f79036568b7a34f48ab6c722b19cdf27, type: 3}
+  grip_icon: {fileID: 2800000, guid: 6883cf1880b96974c8a6431e48a69809, type: 3}
   highlight: {fileID: 1815647307}
 --- !u!61 &1890192204
 BoxCollider2D:
