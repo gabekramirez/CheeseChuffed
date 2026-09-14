@@ -24,6 +24,7 @@ public class Lever_Control : MonoBehaviour
             Ager.LeverHold();
             gameObject.SendMessage("HoverOff");
             gameObject.GetComponent<SpriteRenderer>().sprite = Held_Sprite;
+            Ager.SendMessage("HoverOff");
         }
         
     }
@@ -34,6 +35,7 @@ public class Lever_Control : MonoBehaviour
             Ager.LeverUnHold();
             gameObject.SendMessage("HoverOn");
             gameObject.GetComponent<SpriteRenderer>().sprite = starter_sprite;
+            Ager.SendMessage("HoverOn");
         }
         
     }
