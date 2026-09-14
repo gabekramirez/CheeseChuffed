@@ -190,287 +190,375 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sheet1_0
+      name: tilebricks
       rect:
         serializedVersion: 2
         x: 2
-        y: 215
-        width: 66
+        y: 476
+        width: 34
         height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 502cb9d073142e970800000000000000
-      internalID: 8782653928033206789
+      spriteID: 26a6a7c32b727364197e45b59562006b
+      internalID: -86203332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet1_1
+      name: tilecheese
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 476
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd2f88773516774b98ce61fea1c8685
+      internalID: 108700425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clipboard
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 444
+        width: 45
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f80fbcadf416404ab301cb789c5c17a
+      internalID: -724132746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheese
       rect:
         serializedVersion: 2
         x: 2
-        y: 204
+        y: 456
         width: 28
         height: 11
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d1aa5baf3620aac90800000000000000
-      internalID: -7157906029320754659
+      spriteID: 6a22fcdb28b36c64cac979fd09552b30
+      internalID: -334238592
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet1_2
-      rect:
-        serializedVersion: 2
-        x: 68
-        y: 191
-        width: 45
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e748484bd44967dc0800000000000000
-      internalID: -3641560187220491138
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet1_3
+      name: bar
       rect:
         serializedVersion: 2
         x: 35
-        y: 205
-        width: 30
-        height: 9
+        y: 454
+        width: 31
+        height: 13
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1e718b3f4e1fd78b0800000000000000
-      internalID: -5152696432998213663
+      spriteID: f1b86276a82cb8a46bdf9b7bf6e234f0
+      internalID: 78305720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet1_4
+      name: indicator
       rect:
         serializedVersion: 2
-        x: 35
-        y: 186
-        width: 33
-        height: 19
+        x: 58
+        y: 439
+        width: 10
+        height: 15
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: af36c67633d651ac0800000000000000
-      internalID: -3885079035991268358
+      spriteID: b6923068b0b31f44d8a30793cd2eab3a
+      internalID: 31590425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet1_5
+      name: table
       rect:
         serializedVersion: 2
         x: 2
-        y: 177
+        y: 430
         width: 53
         height: 20
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 56eb66229f8b846f0800000000000000
-      internalID: -700106361892585883
+      spriteID: 6f1b5f95b2eee0448a8e3a2be54c0247
+      internalID: 317070075
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet1_6
+      name: shelf
       rect:
         serializedVersion: 2
         x: 2
-        y: 165
+        y: 403
         width: 123
-        height: 18
+        height: 5
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1f9dcf6fc561c64f0800000000000000
-      internalID: -834267242433816079
+      spriteID: 0ec2b1c277c49bf40ab3ef9af0badfe2
+      internalID: -1041130240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet1_7
+      name: shelfcheese
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 408
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7425c141c8b776948ae2b73190be1312
+      internalID: -905677522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stove
       rect:
         serializedVersion: 2
         x: 4
-        y: 128
-        width: 57
-        height: 37
+        y: 379
+        width: 52
+        height: 25
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 523f184120acab4f0800000000000000
-      internalID: -812114672504147163
+      spriteID: 8ff4c92945e79ee418909b1a3596d2ee
+      internalID: -198398998
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet1_8
+      name: dial1
       rect:
         serializedVersion: 2
-        x: 57
-        y: 133
-        width: 8
-        height: 10
+        x: 3
+        y: 361
+        width: 30
+        height: 15
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b6c73d4fb3bfc30b0800000000000000
-      internalID: -5747442789502452629
+      spriteID: 7546ab752562c1d459c65a8bf09d6e6c
+      internalID: -1881054529
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pot
+      name: dial2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 361
+        width: 30
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6f889caa9012bb479a12d571b8a6fb9
+      internalID: -905156833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: potmilk
       rect:
         serializedVersion: 2
         x: 60
-        y: 142
+        y: 390
         width: 43
-        height: 19
+        height: 10
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9bf89503af54e0f80800000000000000
-      internalID: -8138490535756591175
+      spriteID: d9a49297569ba2042872c966f0784a67
+      internalID: -1563929063
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet1_10
+      name: potbottom
       rect:
         serializedVersion: 2
         x: 63
-        y: 130
+        y: 380
+        width: 37
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af5e418c076d1ba419301dbb822126d9
+      internalID: 1792374631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: potlid
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 363
         width: 37
         height: 13
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9a70fc7dcd12c5a60800000000000000
-      internalID: 7664037898274932649
+      spriteID: 45a5365e49a8f1c4bbcdb7db67c09179
+      internalID: -1507603751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet1_11
+      name: trophy
       rect:
         serializedVersion: 2
         x: 103
-        y: 138
+        y: 376
         width: 21
         height: 26
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5d1c87db55078d700800000000000000
-      internalID: 565325266788336085
+      spriteID: 83335c0b88f4ed4459484ac602a7811d
+      internalID: 1552917089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet1_12
+      name: spoon
       rect:
         serializedVersion: 2
-        x: 1
-        y: 100
+        x: 4
+        y: 333
         width: 8
         height: 25
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 10242c1d6d5a972d0800000000000000
-      internalID: -3280408511501942271
+      spriteID: 03763a190e88f4340bf9455eb1491fdb
+      internalID: -201223557
       vertices: []
       indices: 
       edges: []
@@ -479,86 +567,42 @@ TextureImporter:
       name: salt
       rect:
         serializedVersion: 2
-        x: 10
-        y: 100
-        width: 14
+        x: 15
+        y: 333
+        width: 13
         height: 20
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: eed3db315a5505a80800000000000000
+      spriteID: 381b650d8d46345488e65e0109222147
       internalID: -8480183930849509906
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet1_14
+      name: vial
       rect:
         serializedVersion: 2
-        x: 26
-        y: 98
+        x: 31
+        y: 333
         width: 9
         height: 21
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6b8453b24738ee030800000000000000
-      internalID: 3525900093242034358
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet1_15
-      rect:
-        serializedVersion: 2
-        x: 37
-        y: 99
-        width: 18
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 48a5946f0d07a2c20800000000000000
-      internalID: 3182480129478187652
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet1_16
-      rect:
-        serializedVersion: 2
-        x: 55
-        y: 102
-        width: 15
-        height: 15
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8595d9ce3d85899b0800000000000000
-      internalID: -5073207313001785000
+      spriteID: eb98fa51dabe569498f91941c56e65e5
+      internalID: -884247662
       vertices: []
       indices: 
       edges: []
@@ -567,19 +611,19 @@ TextureImporter:
       name: bacteria
       rect:
         serializedVersion: 2
-        x: 70
-        y: 97
-        width: 18
-        height: 21
+        x: 44
+        y: 333
+        width: 14
+        height: 19
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3afd54e4c4dffeeb0800000000000000
+      spriteID: 514b6ccd00c99e541938e55ed4add047
       internalID: -4688250182896853085
       vertices: []
       indices: 
@@ -589,174 +633,306 @@ TextureImporter:
       name: milk
       rect:
         serializedVersion: 2
-        x: 89
-        y: 101
+        x: 63
+        y: 333
         width: 9
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f9e31f86fb4a52840800000000000000
+      spriteID: 7246f1db86bff424eb6379da7986fd06
       internalID: 5198742486875455135
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet1_19
+      name: mousepointer
       rect:
         serializedVersion: 2
-        x: 4
-        y: 55
+        x: 3
+        y: 311
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe5fec0de5fd79944bb03c1e78bd8a44
+      internalID: -951363314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mousegrab
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 312
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f37bd4d6f49bad440949dacc1375c962
+      internalID: 1262445213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lever1
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 321
+        width: 14
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3196bc7c4c332c4fb3cd6669e0af3ca
+      internalID: -1109609172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lever2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 332
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16d70013c38a0d94aad6dd1e43370dcd
+      internalID: -1855998593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dialog
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 269
         width: 78
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 63b86e9010cdd0d00800000000000000
-      internalID: 940649794209483574
+      spriteID: 141d66612397c1149b83e48e73189656
+      internalID: -1327457931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet1_20
+      name: agecheese
       rect:
         serializedVersion: 2
-        x: 85
-        y: 77
+        x: 2
+        y: 213
+        width: 53
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a7b6b925aff1184e9acab0c8e85174e
+      internalID: 2004689155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: age
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 214
+        width: 53
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe5609ecd0ebd494b9aaad37dbc15632
+      internalID: 1247305684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mousetalk1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 291
         width: 12
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: dda7763f417496150800000000000000
-      internalID: 5866298144935344861
+      spriteID: 2b27b49f4b6302343a0b581c3c75ae8d
+      internalID: 1490065922
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet1_21
-      rect:
-        serializedVersion: 2
-        x: 87
-        y: 77
-        width: 21
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 34c158da37f9c9930800000000000000
-      internalID: 4151368275709992003
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet1_22
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 6
-        width: 59
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4fef542580438ebc0800000000000000
-      internalID: -3753693079068606732
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet1_23
-      rect:
-        serializedVersion: 2
-        x: 85
-        y: 55
-        width: 12
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e643d72d3ec55b0d0800000000000000
-      internalID: -3407715409477159826
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet1_24
+      name: sheet1_0
       rect:
         serializedVersion: 2
         x: 94
-        y: 55
-        width: 14
-        height: 20
+        y: 291
+        width: 12
+        height: 15
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 851e854a81c244ba0800000000000000
-      internalID: -6105706710459424424
+      spriteID: 4307b8dba6594474ca37b22aa2c9e23f
+      internalID: 8782653928033206789
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet1_25
+      name: mouseeat1
       rect:
         serializedVersion: 2
-        x: 73
-        y: 21
-        width: 33
-        height: 32
+        x: 83
+        y: 269
+        width: 12
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9a1c5db78066743a0800000000000000
-      internalID: -6681259335557463639
+      spriteID: 3dd8def6bbe22b448aedc998d90e3eec
+      internalID: -910654279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mouseeat2
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 269
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca7f24f512623d458f35d822032329a
+      internalID: -1701820017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clock
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 242
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 095d5a29953b66b4b94a355c311cea83
+      internalID: 260782981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: potempty
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 433
+        width: 44
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33368ea220199274ea42f54ecd8ab001
+      internalID: -1704010641
       vertices: []
       indices: 
       edges: []
@@ -775,18 +951,39 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      age: 1247305684
+      agecheese: 2004689155
       bacteria: -4688250182896853085
+      bar: 78305720
+      cheese: -334238592
+      clipboard: -724132746
+      clock: 260782981
+      dial1: -1881054529
+      dial2: -905156833
+      dialog: -1327457931
+      indicator: 31590425
+      lever1: -1109609172
+      lever2: -1855998593
       milk: 5198742486875455135
-      pot: -8138490535756591175
+      mouseeat1: -7157906029320754659
+      mouseeat2: -1701820017
+      mousegrab: 1262445213
+      mousepointer: -951363314
+      mousetalk1: 1490065922
+      potbottom: 1792374631
+      potempty: -1704010641
+      potlid: -1507603751
+      potmilk: -1563929063
       salt: -8480183930849509906
       sheet1_0: 8782653928033206789
-      sheet1_1: -7157906029320754659
       sheet1_10: 7664037898274932649
       sheet1_11: 565325266788336085
       sheet1_12: -3280408511501942271
+      sheet1_13: -159401497
       sheet1_14: 3525900093242034358
       sheet1_15: 3182480129478187652
       sheet1_16: -5073207313001785000
+      sheet1_17: -322051560
       sheet1_19: 940649794209483574
       sheet1_2: -3641560187220491138
       sheet1_20: 5866298144935344861
@@ -801,6 +998,16 @@ TextureImporter:
       sheet1_6: -834267242433816079
       sheet1_7: -812114672504147163
       sheet1_8: -5747442789502452629
+      sheet1_9: 1051902213
+      shelf: -1041130240
+      shelfcheese: -905677522
+      spoon: -201223557
+      stove: -198398998
+      table: 317070075
+      tilebricks: 8782653928033206789
+      tilecheese: 108700425
+      trophy: 1552917089
+      vial: -884247662
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -18,12 +18,6 @@ public class JudgeUI : MonoBehaviour
     [SerializeField] private GameObject failurePanel;
     public TMP_Text feedbackTXT;
 
-    [Header("Final Results Panel")]
-    [SerializeField] private GameObject finalResultsPanel;
-    [SerializeField] private TMP_Text cheesesMadeTXT;
-    [SerializeField] private TMP_Text averageAttemptsTXT;
-    [SerializeField] private TMP_Text timeTakenTXT;
-
     [Header("Order Recieved")]
     [SerializeField] private TMP_Text recievedCheeseNameTXT;
     [SerializeField] private TMP_Text recievedCheeseDescriptionTXT;
@@ -326,13 +320,7 @@ public class JudgeUI : MonoBehaviour
     public void EndGame()
     {
         // Pull up final results panel.
-        finalResultsPanel.SetActive(true);
-
-        //And final game data
-
-        cheesesMadeTXT.text = "";
-        averageAttemptsTXT.text = "";
-        timeTakenTXT.text = "";
+        SceneManager.LoadScene("TrophyRoom");
     }
 
 

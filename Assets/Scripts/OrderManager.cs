@@ -10,6 +10,7 @@ public class OrderManager : MonoBehaviour
     public static List<Cheese> cheeses;
     public List<Cheese> initializedCheeses;
     public static bool shouldAssignNewCheese=true;
+    public static EndData endData;
 
 
     [HideInInspector]
@@ -29,6 +30,21 @@ public class OrderManager : MonoBehaviour
 
         OrderManager.cheeses = initializedCheeses;
       
+    }
+
+    void Update()
+    {
+        OrderManager.endData.seconds += Time.deltaTime;
+        if (OrderManager.endData.seconds >= 60)
+        {
+            OrderManager.endData.minutes ++;
+            OrderManager.endData.seconds = 0;
+            if (OrderManager.endData.minutes >= 60)
+            {
+                OrderManager.endData.hours++;
+                OrderManager.endData.minutes = 0;
+            }
+        }
     }
 
  
@@ -94,4 +110,19 @@ public class CheeseAttempt
             ageFeedback = this.ageFeedback
         };
     }
+}
+
+
+
+[System.Serializable]
+public class EndData
+{
+    [Header("Time")]
+    public float hours;
+    public float minutes;
+    public float seconds;
+
+    [Header("CheeseData")]
+    public int cheesesCompleted;
+    public float averageAttempts;
 }
