@@ -29,11 +29,21 @@ public class DraggableClass : MonoBehaviour
     public Texture2D grip_icon;
     Vector3 mouse_position;
 
-    public GameObject pot;
+    public OutlineWhenHovered highlight;
 
+    private Level_Controller level_controller;
     void Awake()
     {
         initial_position = gameObject.transform.position;
+        MonoBehaviour[] allScripts = FindObjectsByType<MonoBehaviour>();
+        for (int i = 0; i < allScripts.Length; i++)
+        {
+           if(allScripts[i] is Level_Controller)
+            {
+                level_controller = allScripts[i] as Level_Controller;
+            }
+               
+        }
     }
 
     void OnMouseOver()
@@ -59,9 +69,13 @@ public class DraggableClass : MonoBehaviour
         gameObject.transform.localScale = Vector3.one * 1.1f;
         gameObject.transform.eulerAngles = Vector3.forward * (10f + zRot);
         gameObject.SendMessage("HoverOff");
-        if (pot)
+        if (highlight)
         {
-            pot.SendMessage("HoverOn");
+            highlight.HoverOn();
+        }
+        if (gameObject.name == "CheesePickup")
+        {
+            level_controller.SendMessage("move_camera");
         }
     }
 
@@ -77,13 +91,13 @@ public class DraggableClass : MonoBehaviour
             isTracing = true;
             mouse_position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + Vector3.forward * 10;
         }
-        else
+        else if (isHeld)
         {
             onDrop();
         }
-        if (pot)
+        if (highlight)
         {
-            pot.SendMessage("HoverOff");
+            highlight.HoverOff();
         }
         gameObject.transform.localScale = Vector3.one;
         gameObject.transform.eulerAngles = new Vector3(0,0,zRot);

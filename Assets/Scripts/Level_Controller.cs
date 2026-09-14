@@ -6,10 +6,13 @@ public class Level_Controller : MonoBehaviour
     private bool isCameraMoving = false;
     private float camera_elapsed = 0.0f;
     public DraggableClass cheese_pickup;
+    public ager_handler age_machine;
 
     private int cheese_level = 0;
     private int bac_level = 0;
     private int age_level = 0;
+
+    
 
     public void add_ingredient(int type)
     {
@@ -23,12 +26,18 @@ public class Level_Controller : MonoBehaviour
         else
         {
             age_level++;
+            if (age_level >= 10)
+            {
+                age_machine.removeCheese();
+                ready_cheese(cheese_pickup.initial_position);
+            }
         }
     }
-    public void ready_cheese()
+    public void ready_cheese(Vector3 newPosition)
     {
         //cheese_pickup.transform.position = new Vector3(0,0,1);
-        cheese_pickup.initial_position = new Vector3(0, 0, 1);
+        cheese_pickup.initial_position = newPosition;
+        
         cheese_pickup.isHeld = true;
         cheese_pickup.SendMessage("OnMouseUp");
     }
@@ -38,6 +47,9 @@ public class Level_Controller : MonoBehaviour
 
         isCameraMoving = true;
         cheese_pickup.initial_position = new Vector3(20, 0, 1);
+        print(cheese_level);
+        print(bac_level);
+        print(age_level);
     }
 
     void Update()

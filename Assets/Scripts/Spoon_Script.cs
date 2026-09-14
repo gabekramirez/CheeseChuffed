@@ -47,7 +47,7 @@ public class Spoon_Script : MonoBehaviour
             {
                 print("Stir Goal met!");
                 stir_distance = 0.0f;
-                level_controller.SendMessage("ready_cheese");
+                level_controller.SendMessage("ready_cheese", new Vector3(0,0,1));
                 gameObject.SendMessage("OnMouseUp");
                 
             }
