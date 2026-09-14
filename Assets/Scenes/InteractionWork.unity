@@ -2167,6 +2167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pot_Handler
   level_controller: {fileID: 1652803446}
+  full_icon: {fileID: -5160660819957252609, guid: 3a3fde47c68ea1b428af5b215c966cab, type: 3}
 --- !u!61 &1290519505
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2493,7 +2494,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4, y: 2}
+    oldSize: {x: 0.9, y: 1.6}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2568,7 +2569,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -8480183930849509906, guid: b25e51539bfa969488e8d2b66164bd5c, type: 3}
+  m_Sprite: {fileID: 5198742486875455135, guid: b25e51539bfa969488e8d2b66164bd5c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
