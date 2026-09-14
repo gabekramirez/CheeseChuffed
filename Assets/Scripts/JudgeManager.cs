@@ -25,11 +25,6 @@ public class JudgeManager : MonoBehaviour
 
     void Start()
     {
-        //VERY TEMPORARY
-        //OrderManager.ongoingCheese = temporaryCheese;
-        //OrderManager.ongoingCheeseAttempt = temporaryCheeseAttempt;
-
-
         judgeUI.OpenJudgingScene();
         judgeUI.SetJudgeIndicator(-1); //None
         judgeUI.SetScoringIndicator(-1);
@@ -55,8 +50,6 @@ public class JudgeManager : MonoBehaviour
             );
 
             //Play eating sound
-            
-
             //Move the block with its arrow.
             //Reset the arrow to its centred position
             judgeUI.SetArrowPosition(0);
@@ -105,10 +98,22 @@ public class JudgeManager : MonoBehaviour
             ExecuteAfterTime(sceneDelay, ()=> judgeUI.OpenFailurePanel());
         else
             ExecuteAfterTime(sceneDelay, ()=> judgeUI.OpenSuccessPanel());
-
-        //Hide indicators, show the failure or success screen
-     //   ExecuteAfterTime(2, )
     }   
+
+    void Update()
+    {
+        OrderManager.endData.seconds += Time.deltaTime;
+        if (OrderManager.endData.seconds >= 60)
+        {
+            OrderManager.endData.minutes ++;
+            OrderManager.endData.seconds = 0;
+            if (OrderManager.endData.minutes >= 60)
+            {
+                OrderManager.endData.hours++;
+                OrderManager.endData.minutes = 0;
+            }
+        }
+    }
 
     public void SetFailureFeedback()
     {
