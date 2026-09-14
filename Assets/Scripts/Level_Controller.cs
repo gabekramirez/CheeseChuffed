@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Level_Controller : MonoBehaviour
 {
@@ -29,7 +30,7 @@ public class Level_Controller : MonoBehaviour
             if (age_level >= 10)
             {
                 age_machine.removeCheese();
-                ready_cheese(cheese_pickup.initial_position);
+                
             }
         }
     }
@@ -37,14 +38,18 @@ public class Level_Controller : MonoBehaviour
     public void remove_cheese(){
         age_machine.removeCheese();
         ready_cheese(cheese_pickup.initial_position);
-        move_camera();
+        //move_camera();
+        OrderManager.ongoingCheeseAttempt.amountOfSalt = cheese_level;
+        OrderManager.ongoingCheeseAttempt.amountOfCulture = bac_level;
+        OrderManager.ongoingCheeseAttempt.amountOfAge = age_level;
+        SceneManager.LoadScene("Judging");
     }
 
 
     public void ready_cheese(Vector3 newPosition)
     {
         //cheese_pickup.transform.position = new Vector3(0,0,1);
-        cheese_pickup.enabled = true;
+        cheese_pickup.gameObject.SetActive(true);
         cheese_pickup.initial_position = newPosition;
         
         cheese_pickup.isHeld = true;
@@ -57,7 +62,7 @@ public class Level_Controller : MonoBehaviour
         current_screen++;
         camera_elapsed = 0.0f;
         isCameraMoving = true;
-        cheese_pickup.initial_position = new Vector3(20, 0, 1);
+        cheese_pickup.initial_position = new Vector3(30, 0, 1);
         print(cheese_level);
         print(bac_level);
         print(age_level);
@@ -70,10 +75,10 @@ public class Level_Controller : MonoBehaviour
             camera_elapsed += Time.deltaTime;
             if (camera_elapsed >= 1.0f)
             {
-                Camera.main.transform.position = new Vector3(Mathf.Lerp(30.0f * (current_screen - 1), 30.0f * current_screen, 1 - Mathf.Pow(1 - (camera_elapsed - 1.0f), 3)), 0, -10);
+                Camera.main.transform.position = new Vector3(Mathf.Lerp(40.0f * (current_screen - 1), 40.0f * current_screen, 1 - Mathf.Pow(1 - (camera_elapsed - 1.0f), 3)), 0, -10);
                 if (camera_elapsed >= 2.0f)
                 {
-                    Camera.main.transform.position = new Vector3(30 * current_screen, 0, -10);
+                    Camera.main.transform.position = new Vector3(40 * current_screen, 0, -10);
                     isCameraMoving = false;
                 }
             }

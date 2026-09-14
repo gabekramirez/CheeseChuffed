@@ -164,7 +164,7 @@ public class DraggableClass : MonoBehaviour
         //will add complexity later
         isReturning = true;
         
-        
+        print(current_collider.name);
         
         if (current_collider != null && current_collider.tag == "Interactable")
         {

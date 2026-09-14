@@ -9,6 +9,14 @@ public class Lever_Control : MonoBehaviour
     void Awake(){
         starter_sprite = gameObject.GetComponent<SpriteRenderer>().sprite;
     }
+
+    void OnMouseEnter(){
+        gameObject.SendMessage("HoverOn");
+    }
+    void OnMouseExit(){
+        gameObject.SendMessage("HoverOff");
+    }
+
     void OnMouseDown()
     {
         if (Ager.hasCheese){

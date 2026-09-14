@@ -8,7 +8,7 @@ public class Spoon_Script : MonoBehaviour
     private float stir_distance = 0.0f;
     private float previous_frame_x = 0.0f;
 
-    private GameObject level_controller;
+    private Level_Controller level_controller;
 
     public Pot_Handler pot;
     void Awake()
@@ -18,7 +18,7 @@ public class Spoon_Script : MonoBehaviour
         {
            if(allScripts[i] is Level_Controller)
             {
-                level_controller = allScripts[i].gameObject;
+                level_controller = allScripts[i] as Level_Controller;
             }
                
         }
@@ -49,7 +49,7 @@ public class Spoon_Script : MonoBehaviour
             {
                 print("Stir Goal met!");
                 stir_distance = 0.0f;
-                level_controller.SendMessage("ready_cheese", new Vector3(0,0,1));
+                level_controller.SendMessage("ready_cheese", new Vector3(0,-2.5f,1));
                 gameObject.SendMessage("OnMouseUp");
                 
             }

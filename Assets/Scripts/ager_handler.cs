@@ -10,6 +10,9 @@ public class ager_handler : MonoBehaviour
     public GameObject cheese_sprite;
     private bool can_cheese = true;
 
+    public Sprite full_sprite;
+    public Sprite empty_sprite;
+
     public void itemDropped(GameObject item)
     {
         if (item.name == "CheesePickup" && !hasCheese)
@@ -17,6 +20,7 @@ public class ager_handler : MonoBehaviour
             item.transform.position = gameObject.transform.position + Vector3.back;
             hasCheese = true;
             cheese_sprite.GetComponent<SpriteRenderer>().enabled = false;
+            gameObject.GetComponent<SpriteRenderer>().sprite = full_sprite;
         }
     }
 
@@ -26,6 +30,7 @@ public class ager_handler : MonoBehaviour
         cheese_sprite.GetComponent<SpriteRenderer>().enabled = true;
         cheese_sprite.transform.position = gameObject.transform.position;
         LeverUnHold();
+        gameObject.GetComponent<SpriteRenderer>().sprite = empty_sprite;
         can_cheese = false;
     }
 

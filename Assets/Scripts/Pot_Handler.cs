@@ -11,7 +11,7 @@ public class Pot_Handler : MonoBehaviour
 
     public void itemDropped(GameObject item)
     {
-        //print(item.name);
+        print(item.name);
         if ((item.name.Contains("Salt") || item.name.Contains("Bacteria")) && has_milk)
         {
             Destroy(item);
