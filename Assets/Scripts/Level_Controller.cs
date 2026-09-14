@@ -12,7 +12,7 @@ public class Level_Controller : MonoBehaviour
     private int bac_level = 0;
     private int age_level = 0;
 
-    
+    public int current_screen = 0;    
 
     public void add_ingredient(int type)
     {
@@ -33,6 +33,14 @@ public class Level_Controller : MonoBehaviour
             }
         }
     }
+
+    public void remove_cheese(){
+        age_machine.removeCheese();
+        ready_cheese(cheese_pickup.initial_position);
+        move_camera();
+    }
+
+
     public void ready_cheese(Vector3 newPosition)
     {
         //cheese_pickup.transform.position = new Vector3(0,0,1);
@@ -44,7 +52,8 @@ public class Level_Controller : MonoBehaviour
 
     public void move_camera()
     {
-
+        current_screen++;
+        camera_elapsed = 0.0f;
         isCameraMoving = true;
         cheese_pickup.initial_position = new Vector3(20, 0, 1);
         print(cheese_level);
@@ -59,10 +68,10 @@ public class Level_Controller : MonoBehaviour
             camera_elapsed += Time.deltaTime;
             if (camera_elapsed >= 1.0f)
             {
-                Camera.main.transform.position = new Vector3(Mathf.Lerp(0.0f, 30.0f, 1 - Mathf.Pow(1 - (camera_elapsed - 1.0f), 3)), 0, -10);
+                Camera.main.transform.position = new Vector3(Mathf.Lerp(30.0f * (current_screen - 1), 30.0f * current_screen, 1 - Mathf.Pow(1 - (camera_elapsed - 1.0f), 3)), 0, -10);
                 if (camera_elapsed >= 2.0f)
                 {
-                    Camera.main.transform.position = new Vector3(30, 0, -10);
+                    Camera.main.transform.position = new Vector3(30 * current_screen, 0, -10);
                     isCameraMoving = false;
                 }
             }

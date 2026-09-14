@@ -73,7 +73,7 @@ public class DraggableClass : MonoBehaviour
         {
             highlight.HoverOn();
         }
-        if (gameObject.name == "CheesePickup")
+        if (gameObject.name == "CheesePickup" && level_controller.current_screen == 0)
         {
             level_controller.SendMessage("move_camera");
         }

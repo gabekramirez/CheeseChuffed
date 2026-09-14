@@ -6,8 +6,9 @@ public class ager_handler : MonoBehaviour
     public GameObject rotator;
     private bool isMouseHeld = false;
     private float elapsed = 0.0f;
-    private bool hasCheese = false;
+    public bool hasCheese = false;
     public GameObject cheese_sprite;
+    private bool can_cheese = true;
 
     public void itemDropped(GameObject item)
     {
@@ -24,11 +25,11 @@ public class ager_handler : MonoBehaviour
         
         cheese_sprite.GetComponent<SpriteRenderer>().enabled = true;
         cheese_sprite.transform.position = gameObject.transform.position;
-        OnMouseUp();
-        
+        LeverUnHold();
+        can_cheese = false;
     }
 
-    public void OnMouseDown()
+    public void LeverHold()
     {
         if (hasCheese)
         {
@@ -38,14 +39,22 @@ public class ager_handler : MonoBehaviour
         
     }
 
-    public void OnMouseUp()
+    public void LeverUnHold()
     {
         isMouseHeld = false;
     }
 
+    void OnMouseDown(){
+        if (can_cheese && hasCheese){
+            level_controller.remove_cheese();
+            
+        }
+        
+    }
+
     void Update()
     {
-        if (isMouseHeld)
+        if (isMouseHeld && can_cheese)
         {
             elapsed += Time.deltaTime;
             if (elapsed >= 1.0f)
