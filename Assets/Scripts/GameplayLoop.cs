@@ -13,7 +13,12 @@ public class GameplayLoop : MonoBehaviour
         orderManager = GameObject.Find("ScriptManagers/OrderManager").GetComponent<OrderManager>();
         //First part of game loop. Initialize the cheese we're using
         gameplayPhase = GameplayPhase.AddMilk;
-        OrderManager.ongoingCheese = OrderManager.FetchRandomCheese();
+
+        if(OrderManager.shouldAssignNewCheese){
+            OrderManager.ongoingCheese = OrderManager.FetchRandomCheese();
+            OrderManager.shouldAssignNewCheese = false;
+        }
+        
         OrderManager.ongoingCheeseAttempt = new CheeseAttempt();
 
         uIController.SetCurrentOrderUI();

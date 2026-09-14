@@ -37,7 +37,9 @@ public class UIController : MonoBehaviour
         // Clear the UI
         DestroyAllChildren(ordersParent);
 
-        int totalAttempts = OrderManager.previousCheeseAttempts.Count;
+        int totalAttempts = 0;
+        if(OrderManager.previousCheeseAttempts != null)
+            totalAttempts = OrderManager.previousCheeseAttempts.Count;
 
         if(totalAttempts == 0) return;
 
@@ -61,25 +63,25 @@ public class UIController : MonoBehaviour
             newMaximizedAttempt.transform.localScale = new Vector3(1f, 1f, 1f);
 
             //Set texts and onClicks
-            newMinimizedAttemptObject.transform.Find("Top/HeaderTXT").GetComponent<TMP_Text>().text = GetAttemptName(i, totalAttempts);
-            newMinimizedAttemptObject.transform.Find("Top/Button").GetComponent<Button>().onClick.AddListener(() => OpenCloseCheeseAttempt(i));
+            newMaximizedAttempt.transform.Find("Top/HeaderTXT").GetComponent<TMP_Text>().text = GetAttemptName(i, totalAttempts);
+            newMaximizedAttempt.transform.Find("Top/Button").GetComponent<Button>().onClick.AddListener(() => OpenCloseCheeseAttempt(i));
 
                 //Salt
-            newMinimizedAttemptObject.transform.Find("Bottom/Ingredients/Salt/NumericalTXT").GetComponent<TMP_Text>().text = 
+            newMaximizedAttempt.transform.Find("Bottom/Ingredients/Salt/NumericalTXT").GetComponent<TMP_Text>().text = 
             cheeseAttempt.amountOfSalt.ToString();
-            newMinimizedAttemptObject.transform.Find("Bottom/Feedback/Salt/FeedbackTXT").GetComponent<TMP_Text>().text = 
+            newMaximizedAttempt.transform.Find("Bottom/Feedback/Salt/FeedbackTXT").GetComponent<TMP_Text>().text = 
             cheeseAttempt.saltFeedback;
                 
                 //Stink
-            newMinimizedAttemptObject.transform.Find("Bottom/Ingredients/Culture/NumericalTXT").GetComponent<TMP_Text>().text = 
+            newMaximizedAttempt.transform.Find("Bottom/Ingredients/Culture/NumericalTXT").GetComponent<TMP_Text>().text = 
             cheeseAttempt.amountOfCulture.ToString();
-            newMinimizedAttemptObject.transform.Find("Bottom/Feedback/Stink/FeedbackTXT").GetComponent<TMP_Text>().text = 
+            newMaximizedAttempt.transform.Find("Bottom/Feedback/Stink/FeedbackTXT").GetComponent<TMP_Text>().text = 
             cheeseAttempt.cultureFeedback;
               
                 //Age
-            newMinimizedAttemptObject.transform.Find("Bottom/Ingredients/Aging/NumericalTXT").GetComponent<TMP_Text>().text = 
+            newMaximizedAttempt.transform.Find("Bottom/Ingredients/Aging/NumericalTXT").GetComponent<TMP_Text>().text = 
             cheeseAttempt.amountOfAge.ToString();
-            newMinimizedAttemptObject.transform.Find("Bottom/Feedback/Dryness/FeedbackTXT").GetComponent<TMP_Text>().text = 
+            newMaximizedAttempt.transform.Find("Bottom/Feedback/Dryness/FeedbackTXT").GetComponent<TMP_Text>().text = 
             cheeseAttempt.ageFeedback;
 
 

@@ -9,6 +9,8 @@ public class OrderManager : MonoBehaviour
     public static List<CheeseAttempt> previousCheeseAttempts;
     public static List<Cheese> cheeses;
     public List<Cheese> initializedCheeses;
+    public static bool shouldAssignNewCheese=true;
+
 
     [HideInInspector]
     public static List<string> usedCheeses;
