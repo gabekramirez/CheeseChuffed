@@ -29,6 +29,8 @@ public class OrderManager : MonoBehaviour
         usedCheeses = new List<string>();
 
         OrderManager.cheeses = initializedCheeses;
+
+        endData??=new EndData();
       
     }
 

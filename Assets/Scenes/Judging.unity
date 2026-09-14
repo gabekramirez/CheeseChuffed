@@ -8179,7 +8179,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &577266661
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8807,10 +8807,6 @@ MonoBehaviour:
   requestTXT: {fileID: 1223347398}
   failurePanel: {fileID: 577266660}
   feedbackTXT: {fileID: 162244963}
-  finalResultsPanel: {fileID: 919685350}
-  cheesesMadeTXT: {fileID: 1252583105}
-  averageAttemptsTXT: {fileID: 824996710}
-  timeTakenTXT: {fileID: 1709171836}
   recievedCheeseNameTXT: {fileID: 790962310}
   recievedCheeseDescriptionTXT: {fileID: 1802337772}
   yourIngredientsText: {fileID: 1865198134}
@@ -12250,7 +12246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &994743855
 RectTransform:
   m_ObjectHideFlags: 0

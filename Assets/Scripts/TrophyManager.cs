@@ -7,7 +7,6 @@ using System.Collections;
 public class TrophyManager : MonoBehaviour
 {
     [Header("Statistics")]
-    [SerializeField] private GameObject statisticsPage;
     [SerializeField] private TMP_Text cheesesMadeTXT;
     [SerializeField] private TMP_Text averageAttemptsTXT;
     [SerializeField] private TMP_Text timeTakenTXT;
