@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Judging.unity
     guid: 5b434460fb888b24f93fcfee0755b21a
+  - enabled: 1
+    path: Assets/Scenes/TrophyRoom.unity
+    guid: fa40d21c6d3dbf345b565b397213393f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

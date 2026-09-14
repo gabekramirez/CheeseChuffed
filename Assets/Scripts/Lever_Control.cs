@@ -5,6 +5,7 @@ public class Lever_Control : MonoBehaviour
     public ager_handler Ager;
     public Sprite Held_Sprite;
     private Sprite starter_sprite;
+    public UIAudio uIAudio;
 
     void Awake(){
         starter_sprite = gameObject.GetComponent<SpriteRenderer>().sprite;
@@ -25,6 +26,7 @@ public class Lever_Control : MonoBehaviour
             gameObject.SendMessage("HoverOff");
             gameObject.GetComponent<SpriteRenderer>().sprite = Held_Sprite;
             Ager.SendMessage("HoverOff");
+            uIAudio.PlayAudio("Lever");
         }
         
     }

@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class Level_Controller : MonoBehaviour
 {
 
+    public UIAudio uIAudio;
     private bool isCameraMoving = false;
     private float camera_elapsed = 0.0f;
     public DraggableClass cheese_pickup;
@@ -66,6 +67,9 @@ public class Level_Controller : MonoBehaviour
         print(cheese_level);
         print(bac_level);
         print(age_level);
+
+        uIAudio.StopLoopingAudio();
+        
     }
 
     void Update()

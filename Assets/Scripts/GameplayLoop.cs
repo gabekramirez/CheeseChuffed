@@ -22,20 +22,8 @@ public class GameplayLoop : MonoBehaviour
         OrderManager.ongoingCheeseAttempt = new CheeseAttempt();
 
         uIController.SetCurrentOrderUI();
-        uIController.RefreshCheeseAttemptsUI();
-        uIController.SetPhaseText(gameplayPhase);
     }
 
-    public void AdvanceGamePlayPhase()
-    {
-        if(gameplayPhase == GameplayPhase.Present)
-        {
-            SceneManager.LoadScene("Judging");
-        }
-
-        gameplayPhase = GetNextGameplayPhase(gameplayPhase);
-        uIController.SetPhaseText(gameplayPhase);
-    }
 
     GameplayPhase GetNextGameplayPhase(GameplayPhase phase)
     {

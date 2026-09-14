@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class ager_handler : MonoBehaviour
 {
+    public UIAudio uIAudio;
     public Level_Controller level_controller;
     public GameObject rotator;
     private bool isMouseHeld = false;
@@ -21,6 +22,7 @@ public class ager_handler : MonoBehaviour
             hasCheese = true;
             cheese_sprite.GetComponent<SpriteRenderer>().enabled = false;
             gameObject.GetComponent<SpriteRenderer>().sprite = full_sprite;
+            uIAudio.PlayAudio("IntoAge");
         }
     }
 
@@ -67,6 +69,7 @@ public class ager_handler : MonoBehaviour
                 elapsed = 0.0f;
                 level_controller.add_ingredient(2);
                 rotator.transform.eulerAngles -= new Vector3(0, 0, 36);
+                uIAudio.PlayAudio("Clocktick");
             }
         }
     }

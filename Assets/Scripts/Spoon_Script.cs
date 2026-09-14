@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Spoon_Script : MonoBehaviour
 {
+    public UIAudio uIAudio;
     private bool isStirring = false;
 
     private float stir_distance = 0.0f;
@@ -29,6 +30,7 @@ public class Spoon_Script : MonoBehaviour
         if (collider.gameObject.name == "Pot")
         {
             isStirring = true;
+            uIAudio.PlayAudio("Stir");
         }
     }
     void OnCollisionExit2D(Collision2D collider)

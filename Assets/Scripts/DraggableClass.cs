@@ -7,21 +7,31 @@ using UnityEngine;
 
 
 
+
+
+
 [RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(BoxCollider2D))]
 
 
+
+
 public class DraggableClass : MonoBehaviour
 {
+    public UIAudio uIAudio;
+
 
     public Vector3 initial_position;
     public bool isHeld = false;
     private bool isTracing = false;
 
+
     private bool isReturning = false;
     private GameObject current_collider;
 
+
     public float zRot = 0.0f;
+
 
     const float MAX_DISTANCE = 25.0f;
     const float MAX_SPEED = 400.0f;
@@ -29,7 +39,9 @@ public class DraggableClass : MonoBehaviour
     public Texture2D grip_icon;
     Vector3 mouse_position;
 
+
     public OutlineWhenHovered highlight;
+
 
     private Level_Controller level_controller;
     void Awake()
@@ -44,27 +56,31 @@ public class DraggableClass : MonoBehaviour
             }
                
         }
+
+
+        uIAudio = GameObject.Find("ScriptManagers/UIAudio").transform.GetComponent<UIAudio>();
     }
+
 
     void OnMouseOver()
     {
         if (!isHeld)
         {
-           gameObject.SendMessage("HoverOn"); 
+           gameObject.SendMessage("HoverOn");
         }
-        
+       
     }
     void OnMouseExit()
     {
         if (!isHeld)
         {
-           gameObject.SendMessage("HoverOff"); 
+           gameObject.SendMessage("HoverOff");
         }
-        
+       
     }
     public void OnMouseDown()
     {
-        Cursor.SetCursor(grip_icon, new Vector2(0f,0f), CursorMode.Auto);
+        Cursor.SetCursor(grip_icon, new Vector2(16,16), CursorMode.Auto);
         isHeld = true;
         gameObject.transform.localScale *= 1.1f;
         gameObject.transform.eulerAngles = Vector3.forward * (10f + zRot);
@@ -77,14 +93,22 @@ public class DraggableClass : MonoBehaviour
         {
             level_controller.SendMessage("move_camera");
         }
+
+
+        if(this.gameObject.name.Contains("Salt"))
+            uIAudio.PlayAudio("Salt");
+       
+        if(this.gameObject.name.Contains("Bacteria"))
+            uIAudio.PlayAudio("Bacteria");
     }
+
 
     public void OnMouseUp()
     {
         if (!isHeld){
             return;
         }
-        Cursor.SetCursor(hand_icon, new Vector2(0f,0f), CursorMode.Auto);
+        Cursor.SetCursor(hand_icon, new Vector2(16f,16f), CursorMode.Auto);
         isHeld = false;
         if ((gameObject.transform.position - mouse_position).magnitude > 0.0f)
         {
@@ -103,20 +127,21 @@ public class DraggableClass : MonoBehaviour
         gameObject.transform.eulerAngles = new Vector3(0,0,zRot);
     }
 
+
     void Update()
     {
         if (!isHeld && !isTracing && !isReturning)
         {
-            
+           
             return;
         }
         Vector3 frame_position = gameObject.transform.position;
         if (!isTracing)
         {
-           mouse_position = Camera.main.ScreenToWorldPoint(Input.mousePosition); 
+           mouse_position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
            mouse_position.z += 10.0f;
         }
-        
+       
         Vector3 goal_distance;
         if (isReturning)
         {
@@ -126,10 +151,11 @@ public class DraggableClass : MonoBehaviour
         {
             goal_distance = mouse_position - frame_position;
         }
-        
-        
+       
+       
         Vector3 frame_direction = goal_distance.normalized * Math.Clamp(goal_distance.magnitude/MAX_DISTANCE, 0, 1) * MAX_SPEED * Time.deltaTime;
         frame_position += frame_direction;
+
 
         if ((isTracing) && goal_distance.magnitude < .1f)
         {
@@ -142,14 +168,16 @@ public class DraggableClass : MonoBehaviour
             isReturning = false;
         }
 
+
         gameObject.transform.position = frame_position;
     }
+
 
     void OnCollisionEnter2D(Collision2D collider)
     {
         print("collided on main script");
         current_collider = collider.gameObject;
-        
+       
     }
     void OnCollisionExit2D(Collision2D collider)
     {
@@ -159,17 +187,25 @@ public class DraggableClass : MonoBehaviour
         }
     }
 
+
     void onDrop()
     {
         //will add complexity later
         isReturning = true;
-        
+       
+        print(current_collider.name);
+       
         if (current_collider != null && current_collider.tag == "Interactable")
         {
             current_collider.SendMessage("itemDropped", gameObject);
 
+
         }
-        
+       
     }
 
+
 }
+
+
+

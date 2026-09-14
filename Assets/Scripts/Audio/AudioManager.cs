@@ -5,7 +5,8 @@ using UnityEngine.UI;
 /// <summary>
 /// Central audio manager. Attach to a persistent GameObject in your first scene.
 /// Handles ambient tracks (sequential looping), music tracks (sequential looping),
-/// a single persistent looping song (position-preserving across scenes), and SFX.
+/// a single persistent looping song (position-preserving across scenes), SFX,
+/// and a single looping SFX slot for continuous sounds you start/stop on demand.
 /// Supports pause/resume/skip on ambient and music.
 /// </summary>
 public class AudioManager : MonoBehaviour
@@ -43,6 +44,7 @@ public class AudioManager : MonoBehaviour
     private AudioSource _musicA,   _musicB;
     private AudioSource _sfxSource;
     private AudioSource _loopSource;
+    private AudioSource _loopingSFXSource;
 
     // -- Ambient state ---------------------------------------------------------
     private bool      _ambientActive;
@@ -102,12 +104,13 @@ public class AudioManager : MonoBehaviour
 
     private void BuildSources()
     {
-        _ambientA   = AddSource("Ambient_A", loop: false);
-        _ambientB   = AddSource("Ambient_B", loop: false);
-        _musicA     = AddSource("Music_A",   loop: false); // loop disabled — cycle handles it
-        _musicB     = AddSource("Music_B",   loop: false);
-        _sfxSource  = AddSource("SFX",       loop: false);
-        _loopSource = AddSource("LoopTrack", loop: true);  // this one actually loops itself
+        _ambientA         = AddSource("Ambient_A",   loop: false);
+        _ambientB         = AddSource("Ambient_B",   loop: false);
+        _musicA           = AddSource("Music_A",     loop: false); // loop disabled — cycle handles it
+        _musicB           = AddSource("Music_B",     loop: false);
+        _sfxSource        = AddSource("SFX",         loop: false);
+        _loopSource       = AddSource("LoopTrack",   loop: true);  // this one actually loops itself
+        _loopingSFXSource = AddSource("LoopingSFX",  loop: true);  // single on/off looping SFX slot
     }
 
     private AudioSource AddSource(string label, bool loop)
@@ -460,6 +463,32 @@ public class AudioManager : MonoBehaviour
     /// <summary>Play a UI click or similar instant effect.</summary>
     public void PlayClick(AudioClip clip) => PlaySFX(clip);
 
+    /// <summary>
+    /// Plays a single clip on continuous loop until StopLoopingSFX is called.
+    /// Independent of the ambient playlist cycle and the persistent loop track —
+    /// use this for things like a toggled rain sound, a machine hum, or any
+    /// single looping effect you turn on and off from UI/gameplay code.
+    /// Calling this again while already looping swaps to the new clip immediately.
+    /// </summary>
+    public void PlayLoopingSFX(AudioClip clip, float fadeIn = 0f)
+    {
+        if (clip == null) return;
+        _loopingSFXSource.clip = clip;
+        _loopingSFXSource.volume = fadeIn > 0f ? 0f : sfxVolume * masterVolume;
+        _loopingSFXSource.Play();
+        if (fadeIn > 0f) FadeSource(_loopingSFXSource, sfxVolume * masterVolume, fadeIn);
+    }
+
+    /// <summary>Stops whatever clip is currently looping via PlayLoopingSFX.</summary>
+    public void StopLoopingSFX(float fadeOut = 0f)
+    {
+        if (fadeOut > 0f) FadeSource(_loopingSFXSource, 0f, fadeOut);
+        else _loopingSFXSource.Stop();
+    }
+
+    /// <summary>True if a clip is currently playing via PlayLoopingSFX.</summary>
+    public bool IsLoopingSFXPlaying => _loopingSFXSource.isPlaying;
+
     // =========================================================================
     // Volume helpers
     // =========================================================================
@@ -488,7 +517,9 @@ public class AudioManager : MonoBehaviour
 
     public void SetSFXVolume()
     {
+        // Also drives the looping SFX slot's volume — they share this slider.
         if (effectsVolumeSlider != null) sfxVolume = Mathf.Clamp01(effectsVolumeSlider.value);
+        RefreshVolumes();
         SaveVolumeSettings();
     }
 
@@ -499,6 +530,7 @@ public class AudioManager : MonoBehaviour
         if (_musicA.isPlaying)   _musicA.volume   = musicVolume   * masterVolume;
         if (_musicB.isPlaying)   _musicB.volume   = musicVolume   * masterVolume;
         if (_loopSource.isPlaying) _loopSource.volume = musicVolume * masterVolume;
+        if (_loopingSFXSource.isPlaying) _loopingSFXSource.volume = sfxVolume * masterVolume;
     }
 
     // =========================================================================
@@ -696,7 +728,7 @@ public class AudioManager : MonoBehaviour
     }
 
     public void ChangeSceneMusic(AudioClip newClip)
-{
-    SetLoopTrack(newClip, true, true);
-}
+    {
+        SetLoopTrack(newClip, true, true);
+    }
 }

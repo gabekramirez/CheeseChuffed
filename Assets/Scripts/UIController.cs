@@ -13,80 +13,12 @@ public class UIController : MonoBehaviour
     [SerializeField] private TMP_Text cheeseOrderedTXT;
     [SerializeField] private TMP_Text descriptionOrderedTXT;
 
-    [Header("Previous Orders UI")]
-    [SerializeField] private Transform ordersParent;
-    [SerializeField] private GameObject orderMinimizedPrefab;
-    [SerializeField] private GameObject orderMaximizedPrefab;
-
-    [Header("Gameplay Phase UI")]
-    [SerializeField] private TMP_Text phaseTXT;
-
     public void SetCurrentOrderUI()
     {
         cheeseOrderedTXT.text = OrderManager.ongoingCheese.name;
         descriptionOrderedTXT.text = $"\"{OrderManager.ongoingCheese.description}\"";
     }
 
-    public void SetPhaseText(GameplayPhase phase)
-    {
-        phaseTXT.text = GamePlayPhaseToString(phase);
-    }
-
-    public void RefreshCheeseAttemptsUI()
-    {
-        // Clear the UI
-        DestroyAllChildren(ordersParent);
-
-        int totalAttempts = 0;
-        if(OrderManager.previousCheeseAttempts != null)
-            totalAttempts = OrderManager.previousCheeseAttempts.Count;
-
-        if(totalAttempts == 0) return;
-
-        //Go through in reverse order so latest is at the top
-        for (int i = totalAttempts - 1; i >= 0; i--)
-        {
-            CheeseAttempt cheeseAttempt = OrderManager.previousCheeseAttempts[i];
-
-            //Minimized
-            GameObject newMinimizedAttemptObject = Instantiate(orderMinimizedPrefab);
-            newMinimizedAttemptObject.transform.SetParent(ordersParent);
-            newMinimizedAttemptObject.transform.localScale = new Vector3(1f, 1f, 1f);
-
-            // Set texts and onClicks
-            newMinimizedAttemptObject.transform.Find("HeaderTXT").GetComponent<TMP_Text>().text = GetAttemptName(i, totalAttempts);
-            newMinimizedAttemptObject.transform.Find("Button").GetComponent<Button>().onClick.AddListener(() => OpenCloseCheeseAttempt(i));
-
-            //Maximized
-            GameObject newMaximizedAttempt = Instantiate(orderMaximizedPrefab);
-            newMaximizedAttempt.transform.SetParent(ordersParent);
-            newMaximizedAttempt.transform.localScale = new Vector3(1f, 1f, 1f);
-
-            //Set texts and onClicks
-            newMaximizedAttempt.transform.Find("Top/HeaderTXT").GetComponent<TMP_Text>().text = GetAttemptName(i, totalAttempts);
-            newMaximizedAttempt.transform.Find("Top/Button").GetComponent<Button>().onClick.AddListener(() => OpenCloseCheeseAttempt(i));
-
-                //Salt
-            newMaximizedAttempt.transform.Find("Bottom/Ingredients/Salt/NumericalTXT").GetComponent<TMP_Text>().text = 
-            cheeseAttempt.amountOfSalt.ToString();
-            newMaximizedAttempt.transform.Find("Bottom/Feedback/Salt/FeedbackTXT").GetComponent<TMP_Text>().text = 
-            cheeseAttempt.saltFeedback;
-                
-                //Stink
-            newMaximizedAttempt.transform.Find("Bottom/Ingredients/Culture/NumericalTXT").GetComponent<TMP_Text>().text = 
-            cheeseAttempt.amountOfCulture.ToString();
-            newMaximizedAttempt.transform.Find("Bottom/Feedback/Stink/FeedbackTXT").GetComponent<TMP_Text>().text = 
-            cheeseAttempt.cultureFeedback;
-              
-                //Age
-            newMaximizedAttempt.transform.Find("Bottom/Ingredients/Aging/NumericalTXT").GetComponent<TMP_Text>().text = 
-            cheeseAttempt.amountOfAge.ToString();
-            newMaximizedAttempt.transform.Find("Bottom/Feedback/Dryness/FeedbackTXT").GetComponent<TMP_Text>().text = 
-            cheeseAttempt.ageFeedback;
-
-
-        }
-    }
 
     private string GetAttemptName(int index, int totalAttempts)
     {
@@ -116,16 +48,6 @@ public class UIController : MonoBehaviour
         return $"{attemptNumber}{suffix} Attempt";
     }
 
-    public void OpenCloseCheeseAttempt(int index)
-    {
-        Transform attempt = ordersParent.GetChild(index);
-
-        Transform minimized = attempt.Find("Minimized");
-        Transform maximized = attempt.Find("Maximized");
-
-        minimized.gameObject.SetActive(!minimized.gameObject.activeSelf);
-        maximized.gameObject.SetActive(!maximized.gameObject.activeSelf);
-    }
     string GamePlayPhaseToString(GameplayPhase phase)
     {
         switch (phase)
