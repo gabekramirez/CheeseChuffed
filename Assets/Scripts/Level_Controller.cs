@@ -44,10 +44,12 @@ public class Level_Controller : MonoBehaviour
     public void ready_cheese(Vector3 newPosition)
     {
         //cheese_pickup.transform.position = new Vector3(0,0,1);
+        cheese_pickup.enabled = true;
         cheese_pickup.initial_position = newPosition;
         
         cheese_pickup.isHeld = true;
         cheese_pickup.SendMessage("OnMouseUp");
+
     }
 
     public void move_camera()

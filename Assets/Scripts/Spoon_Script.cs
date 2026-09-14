@@ -9,6 +9,8 @@ public class Spoon_Script : MonoBehaviour
     private float previous_frame_x = 0.0f;
 
     private GameObject level_controller;
+
+    public Pot_Handler pot;
     void Awake()
     {
         MonoBehaviour[] allScripts = FindObjectsByType<MonoBehaviour>();
@@ -39,7 +41,7 @@ public class Spoon_Script : MonoBehaviour
 
     void Update()
     {
-        if (isStirring)
+        if (isStirring && pot.has_milk)
         {
             stir_distance += Mathf.Abs(gameObject.transform.position.x - previous_frame_x);
             previous_frame_x = gameObject.transform.position.x;

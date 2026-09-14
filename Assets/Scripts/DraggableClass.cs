@@ -66,7 +66,7 @@ public class DraggableClass : MonoBehaviour
     {
         Cursor.SetCursor(grip_icon, new Vector2(16,16), CursorMode.Auto);
         isHeld = true;
-        gameObject.transform.localScale = Vector3.one * 1.1f;
+        gameObject.transform.localScale *= 1.1f;
         gameObject.transform.eulerAngles = Vector3.forward * (10f + zRot);
         gameObject.SendMessage("HoverOff");
         if (highlight)
@@ -99,7 +99,7 @@ public class DraggableClass : MonoBehaviour
         {
             highlight.HoverOff();
         }
-        gameObject.transform.localScale = Vector3.one;
+        gameObject.transform.localScale /= 1.1f;
         gameObject.transform.eulerAngles = new Vector3(0,0,zRot);
     }
 

@@ -27,7 +27,7 @@ public class OrderManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         usedCheeses = new List<string>();
-
+        endData??=new EndData();
         OrderManager.cheeses = initializedCheeses;
 
         endData??=new EndData();

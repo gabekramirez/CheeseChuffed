@@ -7,11 +7,12 @@ public class Pot_Handler : MonoBehaviour
 
     public Level_Controller level_controller;
     public Sprite full_icon;
+    public bool has_milk = false;
 
     public void itemDropped(GameObject item)
     {
         //print(item.name);
-        if (item.name.Contains("Salt") || item.name.Contains("Bacteria"))
+        if ((item.name.Contains("Salt") || item.name.Contains("Bacteria")) && has_milk)
         {
             Destroy(item);
             if (item.name.Contains("Salt"))
@@ -25,6 +26,7 @@ public class Pot_Handler : MonoBehaviour
         }else if (item.name == "Milk"){
             Destroy(item);
             gameObject.GetComponent<SpriteRenderer>().sprite = full_icon;
+            has_milk = true;
         }
     }
 
